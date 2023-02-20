@@ -6,4 +6,4 @@ Im Rahmen der Veranstaltung Software Engineering soll hier ein Spiel namens "Pon
 ## Git Struktur
 
 - `Documents` enthält sämtliche versionskontrollierte Dokumente
-- `Code` enthält alle implementierungsbezogenen Projektdateien
+- `Pong` enthält alle implementierungsbezogenen Projektdateien
