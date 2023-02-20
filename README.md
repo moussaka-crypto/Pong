@@ -6,4 +6,4 @@ Im Rahmen der Veranstaltung Software Engineering soll ein Spiel namens "Pong" en
 ## Git Struktur
 
 - `Documents` enthält sämtliche versionskontrollierte Dokumente
-- `Pong` enthält alle implementierungsbezogenen Projektdateien
+- `Unity/Pong` enthält alle implementierungsbezogenen Projektdateien
