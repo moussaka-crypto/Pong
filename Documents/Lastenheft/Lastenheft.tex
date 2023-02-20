@@ -1,0 +1,204 @@
+\documentclass{article}
+\usepackage[fontsize=13pt]{fontsize}
+\usepackage[utf8]{inputenc}
+\usepackage[sfdefault]{roboto}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath,amsfonts,amssymb,amstext,esdiff}
+\usepackage{geometry}
+\usepackage{parskip}
+\usepackage{svg}
+\usepackage{float}
+\usepackage{afterpage}
+\usepackage{listings}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{multirow}
+\usepackage{xltabular}
+\usepackage{wrapfig}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage[framemethod=default]{mdframed} % Required for comment environment
+\usepackage{tikz}
+\usepackage[automake,toc,section=section]{glossaries}
+\newcommand{\OPT}[1]{{\color{teal} #1}}
+
+\gdef\contentsname{Inhaltsverzeichnis}
+\gdef\listfigurename{Abbildungsverzeichnis}
+\gdef\listtablename{Tabellenverzeichnis}
+%!TEX option = --shell-escape
+
+\definecolor{dmGreen}{HTML}{009661}
+\definecolor{htmlBlue}{HTML}{0060ff}
+
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{mystyle}{
+commentstyle=\color{codegreen},
+keywordstyle=\color{magenta},
+numberstyle=\tiny\color{codegray},
+stringstyle=\color{codepurple},
+basicstyle=\ttfamily\footnotesize,
+breakatwhitespace=false,
+breaklines=true,
+captionpos=b,
+keepspaces=true,
+numbers=left,
+numbersep=5pt,
+showspaces=false,
+showstringspaces=false,
+showtabs=false,
+tabsize=2
+}
+
+\lstset{style=mystyle}
+\geometry{
+    a4paper,
+    left=25mm,
+    right=25mm,
+    top=10mm,
+    bottom=10mm,
+    includeheadfoot,
+    heightrounded
+}
+
+\newcommand{\argmin}[1]{\underset{#1}{\operatorname{argmin}}}
+\newcommand{\para}[1]{\vspace{-5mm}\subsubsection*{#1}\vspace{-4mm}}
+
+\renewcommand{\baselinestretch}{1.2}
+
+% \renewcommand*{\arraystretch}{1.4}
+\captionsetup[figure]{labelfont={bf},name={Figure}} % Caption title for figures/images
+\captionsetup[table]{labelfont={bf},name={Table}}
+\setlength{\belowcaptionskip}{-6pt} % reduce padding/mardin below figure and table captions
+
+\hypersetup{
+    colorlinks=true,
+    anchorcolor=black,
+    citecolor=htmlBlue, % citations
+    linkcolor=htmlBlue, % in-document links
+    filecolor=black,
+    urlcolor=htmlBlue, % \href{URL}{text} usages
+    pdftitle={D6_Lastenheft_Pong},
+    pdfauthor={Leon Wiesen}
+}
+
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\rightmark}
+\rhead{Lastenheft PONG}
+\cfoot{\thepage}
+
+\makeglossaries
+\input{glossar.tex}
+
+\begin{document}
+\setlength{\emergencystretch}{3em}  % fixes right-margin text overflows
+
+\gdef\contentsname{Inhaltsverzeichnis}
+\gdef\listfigurename{Abbildungsverzeichnis}
+\gdef\listtablename{Tabellenverzeichnis}
+    \pagenumbering{gobble}
+    \selectlanguage{english}
+
+    \input{titlePage.tex}
+
+    \gdef\contentsname{Inhaltsverzeichnis}
+    \tableofcontents
+    \clearpage
+
+    \section*{Changelog}\label{sec:changelog}
+    \addcontentsline{toc}{section}{\protect\numberline{}Changelog}
+    \input{changelog.tex}
+    \clearpage
+
+    \pagenumbering{arabic}\setcounter{page}{1}
+
+    \section{Auftraggeber}\label{sec:auftraggeber}
+        \input{1_Auftraggeber/auftraggeber.tex}
+    \clearpage
+
+    \section{Zeit- und Budgetrahmen}\label{sec:zeitbudget}
+        \input{2_ZeitUndBudget/timeBudget.tex}
+    \clearpage
+
+    \section{Zielbestimmung}\label{sec:bestimmung}
+        \subsection{Zweck}
+            \input{3_Zielbestimmung/Zweck.tex}
+        \subsection{Nutzen}
+            \input{3_Zielbestimmung/Nutzen.tex}
+    \clearpage
+
+    \section{Produkteinsatz}\label{sec:einsatz}
+        \subsection{Anwendungsbereich}
+        \input{4_Produkteinsatz/anwendungsbereich.tex}
+        \subsection{Zielgruppen \& Anwender}
+        \input{4_Produkteinsatz/ZielgruppenAnwender.tex}
+        \subsection{IST-Zustand des Kunden}
+        \input{4_Produkteinsatz/ist_Zustand.tex}
+        \clearpage
+        \subsection{SOLL-Zustand des Kunden}
+        \input{4_Produkteinsatz/soll_Zustand.tex}
+    \clearpage
+
+    \section{Produktfunktionen}\label{sec:funktionen}
+        \subsection{Einleitung}\label{subsec:funktionenEinleitung}
+        \input{5_Produktfunktionen/General.tex}
+        \subsection{Alle Funktionen, beschrieben aus Anwendersicht}\label{subsec:alleFunktionen}
+        \input{5_Produktfunktionen/alleFunktionen.tex}
+        \subsection{Eingabe/Ausgabe}\label{subsec:EinAusgabe}
+        \input{5_Produktfunktionen/EinAusgabe.tex}
+    \clearpage
+
+    \section{Produktdaten}\label{sec:produktdaten}
+        \input{6_Produktdaten/__init__.tex}
+    \clearpage
+
+    \section{Produktleistung, Performance}\label{sec:performance}
+        \input{7_Performance/07_performance.tex} 
+    \clearpage
+
+    \section{Qualitätsanforderungen}\label{sec:quality}
+        \subsection{Bedienbarkeit \& Zuverlässigkeit \& Effizienz}\label{subsec:bedienbarkeit}
+        \input{8_Qualitätsanforderungen/Bedienbarkeit.tex}
+
+        \subsection{Anforderungen an die Änderbarkeit}
+        \input{8_Qualitätsanforderungen/Anforderungen_Änderbarkeit.tex}
+
+        \subsection{Anforderungen an die Darstellung}
+        \input{8_Qualitätsanforderungen/Anforderungen_Darstellung.tex}
+
+        \subsection{Testbarkeit}\label{subsec:tests}
+        \input{8_Qualitätsanforderungen/tests.tex}
+
+    \clearpage
+
+    \section{Tabellarische Requirements}\label{sec:requirements}
+        \input{9_Requirements/__init__.tex}
+    \clearpage
+
+    \section*{Lastenheftabnahme}
+    \addcontentsline{toc}{section}{\protect\numberline{}Lastenheftabnahme}
+        \input{10_Abnahme/unterschrift.tex}
+    \clearpage
+
+    \gdef\listfigurename{Abbildungsverzeichnis}
+    \addcontentsline{toc}{section}{\listfigurename}
+    \listoffigures
+    \clearpage
+    \gdef\listtablename{Tabellenverzeichnis}
+    \addcontentsline{toc}{section}{\listtablename}
+    \listoftables
+    \clearpage
+
+    \printglossary[title=Glossar, toctitle=Glossar]
+    % \clearpage
+
+\end{document}

@@ -1,0 +1,94 @@
+Generelles
+    Singleplayer //OP
+    offline //OP
+    Kein Apple Support //OP, aber mit Android klar
+    Pong //D
+    hochkant //D
+    start/pause //F
+    vorzeitiges Beenden //F
+
+
+User Interface & Design
+    Rote Herzen//D als Lebensanzeige//F
+    Alle Menüs - Selber Hintergrund wie im Spiel (der gakaufte) //D
+    Header Leiste: Leben, Score, Pause //D
+    Score ohne lading zeros //D
+    alles auf englisch //D
+    start screen //D
+        name, play, highscores, credits, sprache, skins
+    TRANSITION: //F
+    play screen
+        erst Spielmodi wählen, dann schwierigkeit //D & OP ??
+    Name nach dem Spiel neu eingeben wenn in die Top10 gekommen //F
+    Sound * //F
+    dynamische Sprache * //F
+    Werbung
+        werbung -> einmalig last chance //F
+    Aktive Power Ups durch Effekte kennzeichnen *//F & D
+        Schweif ändern//F
+        "2x" unterm Score//D
+
+
+Game Mechanics
+    Power Ups auch spawnen auch im Classic mode
+        aber nur für limitierte Zeit
+        Spawning random
+    Ball Steuerung - was steuert den Abflugwinkel
+        Eintrittswinkel
+        Auftreffpunkt
+    Schwierigkeitsstufen
+        leicht -> nicht schneller, großer balken
+        mittel -> mittelgroßer balken, ball wird schneller bis max
+        schwer -> schnellerer anstieg der geschwindigkeit, hganz kleiner balken
+    Spielmodus: "Classic"
+    Spielmodus: "Invasion" *
+    Invasion mode (special mode) *
+        Blockstärke 1-9
+        ca. 6 Blöcke pro Reihe
+        Ball etwas kleiner als Blockgröße (ca. 75%)
+        Mit zunehmender Zeit mehr Stärkere Blöcke
+        blöcke kaputtmachen - gibt punkte
+        verschieden starke blöcke (Zahlen \& Farben)
+        power blöcke / Power Ups
+            TODO: Temporär? Dauer?
+            Ball langsamer
+            ball stärker
+            +1 Life ( spawnt nur wenn <3 lifes)
+            größererer Balken
+            ganze reihe zerstören
+            umliegende blöcke zerstören
+    3 Herzen / Leben
+    eine Spielrunde etwa 5 minuten bei Medium 
+scoring, currency system, Shop
+    local highscore
+    Coin Stand soll im Shop angezeigt werden
+    alle 100 Punke gibt's einen Coin
+    anzeige top10
+    Tabs für die Score Tabellen pro Spielmodus
+    man kann mehrmals auftauchen
+        +n bei Zerstörung einer n-starken Kachel
+    +1 Pro Balken Berührung
+    pro Schweregrad Score multiplyer
+    Coins schalten frei:
+        Skins für Ball, Balken, Hintergrund, Schweif
+        Je 5 Skins per Category + 1 Default
+        Skins werden teurer
+
+
+Balancing
+    Spieldauer im Schnitt 5 Minuten
+    Skins freischaltdauer Target
+        2 Spiele
+        5 Spiele
+        10 Spiele
+        20 Spiele
+        30 Spiele
+
+
+Design:
+    Buttons mit Border-Radius
+    TODO: 5 Design Previews mit Farben, Glow etc.
+    Hintergrund dunkel, nicht einfarbig
+    Bei Vorschau (bild unten rechts) Score dazu
+    Tastatur weg im Top10 Screen, stattdessen 
+    Continue Button weg

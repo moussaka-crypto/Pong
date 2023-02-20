@@ -1,0 +1,89 @@
+\hypertarget{class_database_1_1_data_service}{}\doxysection{Database.\+Data\+Service Class Reference}
+\label{class_database_1_1_data_service}\index{Database.DataService@{Database.DataService}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_database_1_1_data_service_a189a1599da34a7fa62369db8e9114780}\label{class_database_1_1_data_service_a189a1599da34a7fa62369db8e9114780}} 
+{\bfseries Data\+Service} (string Database\+Name)
+\item 
+IEnumerable$<$ \mbox{\hyperlink{class_database_1_1_highscore}{Highscore}} $>$ \mbox{\hyperlink{class_database_1_1_data_service_af07f0bf38a79e62fa800fd77d12f0607}{Get\+Highest\+Highscore}} ()
+\item 
+IEnumerable$<$ \mbox{\hyperlink{class_database_1_1_highscore}{Highscore}} $>$ \mbox{\hyperlink{class_database_1_1_data_service_adf6b1420c0cbcb241008a98501e0c51b}{Get\+Lowest\+Highscore}} ()
+\item 
+IEnumerable$<$ \mbox{\hyperlink{class_database_1_1_skins}{Skins}} $>$ \mbox{\hyperlink{class_database_1_1_data_service_a3cad2341630a0eb29caab040400ba87c}{get\+Skins\+Table}} ()
+\item 
+\mbox{\hyperlink{class_database_1_1_highscore}{Highscore}} \mbox{\hyperlink{class_database_1_1_data_service_a98f38fa7c6ba509da29545b861e083ab}{Create\+Highscore}} (int new\+Score, string new\+Name, int new\+Difficulty)
+\item 
+void \mbox{\hyperlink{class_database_1_1_data_service_a0d72490313ef5487cdbaa69bf5c665d4}{buy\+Skin}} (int id)
+\item 
+IEnumerable$<$ \mbox{\hyperlink{class_database_1_1_highscore}{Highscore}} $>$ \mbox{\hyperlink{class_database_1_1_data_service_aaac165cd0092e2ed88b06589fc20cb3a}{Get\+Highscore}} ()
+\item 
+IEnumerable$<$ \mbox{\hyperlink{class_database_1_1_highscore}{Highscore}} $>$ \mbox{\hyperlink{class_database_1_1_data_service_a77903095b70e2bed17e8db529042d9e6}{Get\+Neighbour\+Score\+Top}} (int new\+Score)
+\item 
+IEnumerable$<$ \mbox{\hyperlink{class_database_1_1_highscore}{Highscore}} $>$ \mbox{\hyperlink{class_database_1_1_data_service_a4615fba5d1a756e7f0e5ac7ff0d50ece}{Get\+Neighbour\+Score\+Bottom}} (int new\+Score)
+\item 
+\mbox{\Hypertarget{class_database_1_1_data_service_a0c4869fac12453273beb2bbd013368c2}\label{class_database_1_1_data_service_a0c4869fac12453273beb2bbd013368c2}} 
+int {\bfseries Subset\+Above\+Count} (int new\+Score)
+\item 
+\mbox{\Hypertarget{class_database_1_1_data_service_ae558a776c4baec406a3bcf4548ddc122}\label{class_database_1_1_data_service_ae558a776c4baec406a3bcf4548ddc122}} 
+int {\bfseries Subset\+Below\+Count} (int new\+Score)
+\item 
+\mbox{\Hypertarget{class_database_1_1_data_service_a9232e889fa095de682f6d3bbe79cf406}\label{class_database_1_1_data_service_a9232e889fa095de682f6d3bbe79cf406}} 
+int {\bfseries count\+Rows} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_database_1_1_data_service_a0d72490313ef5487cdbaa69bf5c665d4}\label{class_database_1_1_data_service_a0d72490313ef5487cdbaa69bf5c665d4}} 
+\index{Database.DataService@{Database.DataService}!buySkin@{buySkin}}
+\index{buySkin@{buySkin}!Database.DataService@{Database.DataService}}
+\doxysubsubsection{\texorpdfstring{buySkin()}{buySkin()}}
+{\footnotesize\ttfamily void Database.\+Data\+Service.\+buy\+Skin (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+Sets the skin ID as purchased in DB \mbox{\Hypertarget{class_database_1_1_data_service_a98f38fa7c6ba509da29545b861e083ab}\label{class_database_1_1_data_service_a98f38fa7c6ba509da29545b861e083ab}} 
+\index{Database.DataService@{Database.DataService}!CreateHighscore@{CreateHighscore}}
+\index{CreateHighscore@{CreateHighscore}!Database.DataService@{Database.DataService}}
+\doxysubsubsection{\texorpdfstring{CreateHighscore()}{CreateHighscore()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_database_1_1_highscore}{Highscore}} Database.\+Data\+Service.\+Create\+Highscore (\begin{DoxyParamCaption}\item[{int}]{new\+Score,  }\item[{string}]{new\+Name,  }\item[{int}]{new\+Difficulty }\end{DoxyParamCaption})}
+
+Creates a new \mbox{\hyperlink{class_database_1_1_highscore}{Highscore}} in the DB \mbox{\Hypertarget{class_database_1_1_data_service_af07f0bf38a79e62fa800fd77d12f0607}\label{class_database_1_1_data_service_af07f0bf38a79e62fa800fd77d12f0607}} 
+\index{Database.DataService@{Database.DataService}!GetHighestHighscore@{GetHighestHighscore}}
+\index{GetHighestHighscore@{GetHighestHighscore}!Database.DataService@{Database.DataService}}
+\doxysubsubsection{\texorpdfstring{GetHighestHighscore()}{GetHighestHighscore()}}
+{\footnotesize\ttfamily IEnumerable$<$ \mbox{\hyperlink{class_database_1_1_highscore}{Highscore}} $>$ Database.\+Data\+Service.\+Get\+Highest\+Highscore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns an IEnumerable of the Highest \mbox{\hyperlink{class_database_1_1_highscore}{Highscore}} \mbox{\Hypertarget{class_database_1_1_data_service_aaac165cd0092e2ed88b06589fc20cb3a}\label{class_database_1_1_data_service_aaac165cd0092e2ed88b06589fc20cb3a}} 
+\index{Database.DataService@{Database.DataService}!GetHighscore@{GetHighscore}}
+\index{GetHighscore@{GetHighscore}!Database.DataService@{Database.DataService}}
+\doxysubsubsection{\texorpdfstring{GetHighscore()}{GetHighscore()}}
+{\footnotesize\ttfamily IEnumerable$<$ \mbox{\hyperlink{class_database_1_1_highscore}{Highscore}} $>$ Database.\+Data\+Service.\+Get\+Highscore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns IEnumerable of all Highscores \mbox{\Hypertarget{class_database_1_1_data_service_adf6b1420c0cbcb241008a98501e0c51b}\label{class_database_1_1_data_service_adf6b1420c0cbcb241008a98501e0c51b}} 
+\index{Database.DataService@{Database.DataService}!GetLowestHighscore@{GetLowestHighscore}}
+\index{GetLowestHighscore@{GetLowestHighscore}!Database.DataService@{Database.DataService}}
+\doxysubsubsection{\texorpdfstring{GetLowestHighscore()}{GetLowestHighscore()}}
+{\footnotesize\ttfamily IEnumerable$<$ \mbox{\hyperlink{class_database_1_1_highscore}{Highscore}} $>$ Database.\+Data\+Service.\+Get\+Lowest\+Highscore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns an IEnumerable of the Lowest \mbox{\hyperlink{class_database_1_1_highscore}{Highscore}} \mbox{\Hypertarget{class_database_1_1_data_service_a4615fba5d1a756e7f0e5ac7ff0d50ece}\label{class_database_1_1_data_service_a4615fba5d1a756e7f0e5ac7ff0d50ece}} 
+\index{Database.DataService@{Database.DataService}!GetNeighbourScoreBottom@{GetNeighbourScoreBottom}}
+\index{GetNeighbourScoreBottom@{GetNeighbourScoreBottom}!Database.DataService@{Database.DataService}}
+\doxysubsubsection{\texorpdfstring{GetNeighbourScoreBottom()}{GetNeighbourScoreBottom()}}
+{\footnotesize\ttfamily IEnumerable$<$ \mbox{\hyperlink{class_database_1_1_highscore}{Highscore}} $>$ Database.\+Data\+Service.\+Get\+Neighbour\+Score\+Bottom (\begin{DoxyParamCaption}\item[{int}]{new\+Score }\end{DoxyParamCaption})}
+
+Returns an IEnumerable of the Score below the given new Score \mbox{\Hypertarget{class_database_1_1_data_service_a77903095b70e2bed17e8db529042d9e6}\label{class_database_1_1_data_service_a77903095b70e2bed17e8db529042d9e6}} 
+\index{Database.DataService@{Database.DataService}!GetNeighbourScoreTop@{GetNeighbourScoreTop}}
+\index{GetNeighbourScoreTop@{GetNeighbourScoreTop}!Database.DataService@{Database.DataService}}
+\doxysubsubsection{\texorpdfstring{GetNeighbourScoreTop()}{GetNeighbourScoreTop()}}
+{\footnotesize\ttfamily IEnumerable$<$ \mbox{\hyperlink{class_database_1_1_highscore}{Highscore}} $>$ Database.\+Data\+Service.\+Get\+Neighbour\+Score\+Top (\begin{DoxyParamCaption}\item[{int}]{new\+Score }\end{DoxyParamCaption})}
+
+Returns an IEnumerable of the Score above the given new Score \mbox{\Hypertarget{class_database_1_1_data_service_a3cad2341630a0eb29caab040400ba87c}\label{class_database_1_1_data_service_a3cad2341630a0eb29caab040400ba87c}} 
+\index{Database.DataService@{Database.DataService}!getSkinsTable@{getSkinsTable}}
+\index{getSkinsTable@{getSkinsTable}!Database.DataService@{Database.DataService}}
+\doxysubsubsection{\texorpdfstring{getSkinsTable()}{getSkinsTable()}}
+{\footnotesize\ttfamily IEnumerable$<$ \mbox{\hyperlink{class_database_1_1_skins}{Skins}} $>$ Database.\+Data\+Service.\+get\+Skins\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns an IEnumerable of the \mbox{\hyperlink{class_database_1_1_skins}{Skins}} Table 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/hornf/\+Documents/\+Gits/pong/\+Unity/\+Pong/\+Assets/\+Scripts/\+Database/Data\+Service.\+cs\end{DoxyCompactItemize}

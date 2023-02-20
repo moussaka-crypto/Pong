@@ -1,0 +1,58 @@
+\hypertarget{class_ball}{}\doxysection{Ball Class Reference}
+\label{class_ball}\index{Ball@{Ball}}
+Inheritance diagram for Ball\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ball}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ball_a1bbc7f65cf45aa13e7f54142d0b7345c}\label{class_ball_a1bbc7f65cf45aa13e7f54142d0b7345c}} 
+void {\bfseries Launch\+Ball} (float speed=2)
+\begin{DoxyCompactList}\small\item\em Launches the ball in a random direction (always 45 deg)  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ball_a8b626e5e2db2bbc7863706c43f3e05c6}\label{class_ball_a8b626e5e2db2bbc7863706c43f3e05c6}} 
+void {\bfseries add\+Speed} (float amount)
+\begin{DoxyCompactList}\small\item\em Makes the ball faster (or slower with negative value)  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ball_a2378c15b896acaef1c8fea9fa4c1ec8c}\label{class_ball_a2378c15b896acaef1c8fea9fa4c1ec8c}} 
+void {\bfseries validate\+Speed} ()
+\begin{DoxyCompactList}\small\item\em Ensures the ball always has the correct velocity (speed)  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ball_a3ebacd34ef6cd326a506818cd01c63d3}\label{class_ball_a3ebacd34ef6cd326a506818cd01c63d3}} 
+void {\bfseries validate\+Angle} ()
+\begin{DoxyCompactList}\small\item\em Ensures the ball always has an angle != 0  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_ball_ab3d26dbdb31d50d859e5334bb03e0f61}\label{class_ball_ab3d26dbdb31d50d859e5334bb03e0f61}} 
+void {\bfseries add\+Side\+Force} (float amount)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_ball}{Ball}} gets redirected when hitting moving playbar  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ball_af388912bf076a6ab3fc636a8557e8c79}\label{class_ball_af388912bf076a6ab3fc636a8557e8c79}} 
+\mbox{\hyperlink{class_game_manager}{Game\+Manager}} {\bfseries gm}
+\item 
+\mbox{\Hypertarget{class_ball_a8b53f284d8c242640a4e900c320fa163}\label{class_ball_a8b53f284d8c242640a4e900c320fa163}} 
+float {\bfseries rotation\+Speed} = 1
+\item 
+\mbox{\Hypertarget{class_ball_a0392c12736a89539c393dfc1537e97b7}\label{class_ball_a0392c12736a89539c393dfc1537e97b7}} 
+Game\+Object {\bfseries bar}
+\item 
+\mbox{\Hypertarget{class_ball_a203456b6a56b975534e833093da1634c}\label{class_ball_a203456b6a56b975534e833093da1634c}} 
+float {\bfseries max\+Speed} = 0
+\item 
+\mbox{\Hypertarget{class_ball_a59163d6e1d1bc29ba743f34232d36c29}\label{class_ball_a59163d6e1d1bc29ba743f34232d36c29}} 
+float {\bfseries current\+Magnitude}
+\item 
+\mbox{\Hypertarget{class_ball_a0bea1bc7d913506dfb7c4dffd5f7fbd0}\label{class_ball_a0bea1bc7d913506dfb7c4dffd5f7fbd0}} 
+float {\bfseries current\+Angle}
+\item 
+\mbox{\Hypertarget{class_ball_a322173a3fe4915afc70b422a1be1a2a9}\label{class_ball_a322173a3fe4915afc70b422a1be1a2a9}} 
+float {\bfseries desired\+Magnitude}
+\item 
+\mbox{\Hypertarget{class_ball_af8252bb62d93e96f15e47dad1ef2ccc2}\label{class_ball_af8252bb62d93e96f15e47dad1ef2ccc2}} 
+Particle\+System {\bfseries bar\+Hit}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/hornf/\+Documents/\+Gits/pong/\+Unity/\+Pong/\+Assets/\+Scripts/\+Pong\+System/Ball.\+cs\end{DoxyCompactItemize}

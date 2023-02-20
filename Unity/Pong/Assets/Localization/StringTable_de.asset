@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: StringTable_de
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de
+  m_SharedData: {fileID: 11400000, guid: fe216616268025c44a02622ff85d285b, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 14355542994944
+    m_Localized: ' Start'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16963263426560
+    m_Localized: Skins
+    m_Metadata:
+      m_Items: []
+  - m_Id: 75272595075072
+    m_Localized: Leicht
+    m_Metadata:
+      m_Items: []
+  - m_Id: 73054416433152
+    m_Localized: "Ein Projekt des Moduls\n\"Software Engeneering\" und\n\"Information
+      System Lifecycle\nManagement\"\r\n\nGemacht f\xFCr:\r\n\rNiklas\nMuthia\n\nEntwickelt
+      von:\nDaniel\nDorian\nFelix\nHris\nLeon\nMarc"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76153302446080
+    m_Localized: Mittel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76418885775360
+    m_Localized: Hart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77407898464256
+    m_Localized: '   Los'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77992240508928
+    m_Localized: Spielmodus Auswahl
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80999782969344
+    m_Localized: Skins
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80563076231168
+    m_Localized: Wollen Sie diesen Skin kaufen?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81739544948736
+    m_Localized: BALL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82287123918848
+    m_Localized: Schweif
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82699755352064
+    m_Localized: Hintergrund
+    m_Metadata:
+      m_Items: []
+  - m_Id: 83057571426304
+    m_Localized: Bar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84026824749056
+    m_Localized: weiter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85350844887040
+    m_Localized: pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85768828252160
+    m_Localized: Beenden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86447303061504
+    m_Localized: Punkte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86881476440064
+    m_Localized: Beenden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87212721598464
+    m_Localized: Faktor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87907558387712
+    m_Localized: Coins
+    m_Metadata:
+      m_Items: []
+  - m_Id: 88911720902656
+    m_Localized: pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 89262083698688
+    m_Localized: weiter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 89747310145536
+    m_Localized: Punkte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 89992878256128
+    m_Localized: Coins
+    m_Metadata:
+      m_Items: []
+  - m_Id: 90175863156736
+    m_Localized: Beenden
+    m_Metadata:
+      m_Items: []
+  - m_Id: 90407883665408
+    m_Localized: Faktor
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91121137643520
+    m_Localized: Dein Name...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 290049602777088
+    m_Localized: Dein Name...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 293763793186816
+    m_Localized: Beenden
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

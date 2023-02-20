@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: StringTable Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: StringTable
+  m_TableCollectionNameGuidString: fe216616268025c44a02622ff85d285b
+  m_Entries:
+  - m_Id: 14355542994944
+    m_Key: Play
+    m_Metadata:
+      m_Items: []
+  - m_Id: 16963263426560
+    m_Key: Skins
+    m_Metadata:
+      m_Items: []
+  - m_Id: 73054416433152
+    m_Key: CreditsText
+    m_Metadata:
+      m_Items: []
+  - m_Id: 75272595075072
+    m_Key: Easy
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76153302446080
+    m_Key: Medium
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76418885775360
+    m_Key: Hard
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77407898464256
+    m_Key: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 77992240508928
+    m_Key: SelectGameMode
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80563076231168
+    m_Key: question
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80999782969344
+    m_Key: skin2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 81739544948736
+    m_Key: BALL
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82287123918848
+    m_Key: Trail
+    m_Metadata:
+      m_Items: []
+  - m_Id: 82699755352064
+    m_Key: BACKGROUND
+    m_Metadata:
+      m_Items: []
+  - m_Id: 83057571426304
+    m_Key: Bar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 84026824749056
+    m_Key: resume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85350844887040
+    m_Key: pause
+    m_Metadata:
+      m_Items: []
+  - m_Id: 85768828252160
+    m_Key: endround
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86447303061504
+    m_Key: 'Score:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 86881476440064
+    m_Key: ENDROUND
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87212721598464
+    m_Key: 'Multiplier:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 87907558387712
+    m_Key: 'Coins:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 88911720902656
+    m_Key: PAUSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 89262083698688
+    m_Key: RESUME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 89747310145536
+    m_Key: 'Score2:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 89992878256128
+    m_Key: 'Coins2:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 90175863156736
+    m_Key: END ROUND2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 90407883665408
+    m_Key: 'Multiplier2:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 91121137643520
+    m_Key: Your Name...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 290049602777088
+    m_Key: New Entry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 293763793186816
+    m_Key: end
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8172697703096254488
+  references:
+    version: 2
+    RefIds:
+    - rid: 8172697703096254488
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1673536142298

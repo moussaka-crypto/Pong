@@ -1,0 +1,1091 @@
+\hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection}{}\doxysection{SQLite4\+Unity3d.\+SQLite\+Connection Class Reference}
+\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection}\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+
+
+Represents an open connection to a SQLite database.   
+
+
+Inheritance diagram for SQLite4\+Unity3d.\+SQLite\+Connection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_s_q_lite4_unity3d_1_1_s_q_lite_connection}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_1_1_column_info}{Column\+Info}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aeab7e74a6d1d75e8f55c56a023eef36a}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aeab7e74a6d1d75e8f55c56a023eef36a}} 
+delegate void {\bfseries Trace\+Handler} (string message)
+\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a39702ddf7f2b7cefd5d4d5f245c4284b}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a39702ddf7f2b7cefd5d4d5f245c4284b}} 
+delegate void {\bfseries Time\+Execution\+Handler} (Time\+Span execution\+Time, Time\+Span total\+Execution\+Time)
+\item 
+\mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ac9bb301501b496d8a93c5c79e7edbd00}{SQLite\+Connection}} (string database\+Path, bool store\+Date\+Time\+As\+Ticks=false)
+\begin{DoxyCompactList}\small\item\em Constructs a new \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection}{SQLite\+Connection}} and opens a SQLite database specified by database\+Path.  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a03781f73cf0b1b2c9e85fe96182adfa1}{SQLite\+Connection}} (string database\+Path, SQLite\+Open\+Flags open\+Flags, bool store\+Date\+Time\+As\+Ticks=false)
+\begin{DoxyCompactList}\small\item\em Constructs a new \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection}{SQLite\+Connection}} and opens a SQLite database specified by database\+Path.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aed7f704b35bcdd189fb01a3728e74926}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aed7f704b35bcdd189fb01a3728e74926}} 
+void {\bfseries Enable\+Load\+Extension} (int onoff)
+\item 
+\mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_table_mapping}{Table\+Mapping}} \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a6d27d4a7d7b2f0896fd22cb09238b5b7}{Get\+Mapping}} (Type type, Create\+Flags create\+Flags=Create\+Flags.\+None)
+\begin{DoxyCompactList}\small\item\em Retrieves the mapping that is automatically generated for the given type.  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_table_mapping}{Table\+Mapping}} \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a4469620d740de496c68b4843265621f2}{Get\+Mapping$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the mapping that is automatically generated for the given type.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a1c6061939b0edc8f4e56085b173be1e9}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a1c6061939b0edc8f4e56085b173be1e9}} 
+int {\bfseries Drop\+Table$<$ T $>$} ()
+\begin{DoxyCompactList}\small\item\em Executes a \char`\"{}drop table\char`\"{} on the database. This is non-\/recoverable.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a8e88e22239c2e4b899a5f6bbc7ecccb7}{Create\+Table$<$ T $>$}} (Create\+Flags create\+Flags=Create\+Flags.\+None)
+\begin{DoxyCompactList}\small\item\em Executes a \char`\"{}create table if not exists\char`\"{} on the database. It also creates any specified indexes on the columns of the table. It uses a schema automatically generated from the specified type. You can later access this schema by calling Get\+Mapping.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a01aba09c5ace356f03f667a416017f6b}{Create\+Table}} (Type ty, Create\+Flags create\+Flags=Create\+Flags.\+None)
+\begin{DoxyCompactList}\small\item\em Executes a \char`\"{}create table if not exists\char`\"{} on the database. It also creates any specified indexes on the columns of the table. It uses a schema automatically generated from the specified type. You can later access this schema by calling Get\+Mapping.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ab8aee23bb3b823fd893bfea314e51cd3}{Create\+Index}} (string index\+Name, string table\+Name, string\mbox{[}$\,$\mbox{]} column\+Names, bool unique=false)
+\begin{DoxyCompactList}\small\item\em Creates an index for the specified table and columns.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a523505494e5fcc19042e4a5d12d7c7cd}{Create\+Index}} (string index\+Name, string table\+Name, string column\+Name, bool unique=false)
+\begin{DoxyCompactList}\small\item\em Creates an index for the specified table and column.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aebc2e2c6d977b45bd730d4d3fb16af52}{Create\+Index}} (string table\+Name, string column\+Name, bool unique=false)
+\begin{DoxyCompactList}\small\item\em Creates an index for the specified table and column.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_adbd1e8d5504dfaf9d4bf4eace79f9ed9}{Create\+Index}} (string table\+Name, string\mbox{[}$\,$\mbox{]} column\+Names, bool unique=false)
+\begin{DoxyCompactList}\small\item\em Creates an index for the specified table and columns.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_af2da5059105f533d02e4f1193b1714f3}{Create\+Index$<$ T $>$}} (Expression$<$ Func$<$ T, object $>$ $>$ property, bool unique=false)
+\begin{DoxyCompactList}\small\item\em Creates an index for the specified object property. e.\+g. Create\+Index$<$\+Client$>$(c =\texorpdfstring{$>$}{>} c.\+Name);  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a53267c6988299ef307d79b661a3fbcc5}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a53267c6988299ef307d79b661a3fbcc5}} 
+List$<$ \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_1_1_column_info}{Column\+Info}} $>$ {\bfseries Get\+Table\+Info} (string table\+Name)
+\item 
+\mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}} \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ae0b1b6274d532d0f3de0c7375258277f}{Create\+Command}} (string cmd\+Text, params object\mbox{[}$\,$\mbox{]} ps)
+\begin{DoxyCompactList}\small\item\em Creates a new \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}} given the command text with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_af284b293344f5c9dfd2c902c7e2c3215}{Execute}} (string query, params object\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. Use this method instead of Query when you don\textquotesingle{}t expect rows back. Such cases include INSERTs, UPDATEs, and DELETEs. You can set the Trace or Time\+Execution properties of the connection to profile execution.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aaeeb21c913fc4fd6e3975a65fda2f16d}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aaeeb21c913fc4fd6e3975a65fda2f16d}} 
+T {\bfseries Execute\+Scalar$<$ T $>$} (string query, params object\mbox{[}$\,$\mbox{]} args)
+\item 
+List$<$ T $>$ \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a9eb10028c2ecc28ae0831822244764d1}{Query$<$ T $>$}} (string query, params object\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. It returns each row of the result using the mapping automatically generated for the given type.  \end{DoxyCompactList}\item 
+IEnumerable$<$ T $>$ \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a1ee4dc9cf80ec0c43b0eac5b90f2c966}{Deferred\+Query$<$ T $>$}} (string query, params object\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. It returns each row of the result using the mapping automatically generated for the given type.  \end{DoxyCompactList}\item 
+List$<$ object $>$ \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad392931c515a51207384a6e30d073055}{Query}} (\mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_table_mapping}{Table\+Mapping}} map, string query, params object\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. It returns each row of the result using the specified mapping. This function is only used by libraries in order to query the database via introspection. It is normally not used.  \end{DoxyCompactList}\item 
+IEnumerable$<$ object $>$ \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_abdc098ec22df2d7f551933f4a71c3618}{Deferred\+Query}} (\mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_table_mapping}{Table\+Mapping}} map, string query, params object\mbox{[}$\,$\mbox{]} args)
+\begin{DoxyCompactList}\small\item\em Creates a \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. It returns each row of the result using the specified mapping. This function is only used by libraries in order to query the database via introspection. It is normally not used.  \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_table_query}{Table\+Query}}$<$ T $>$ \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ac592a646a6120f6c533243f42f380ebd}{Table$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Returns a queryable interface to the table represented by the given type.  \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a943303f56c4911727e0206feefdfff55}{Get$<$ T $>$}} (object pk)
+\begin{DoxyCompactList}\small\item\em Attempts to retrieve an object with the given primary key from the table associated with the specified type. Use of this method requires that the given type have a designated Primary\+Key (using the \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}).  \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a374b6422289401a9ceac927e5208133e}{Get$<$ T $>$}} (Expression$<$ Func$<$ T, bool $>$ $>$ predicate)
+\begin{DoxyCompactList}\small\item\em Attempts to retrieve the first object that matches the t from the table associated with the specified type.  \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_acd2d58eefe5b4cc299c568dbe3189e66}{Find$<$ T $>$}} (object pk)
+\begin{DoxyCompactList}\small\item\em Attempts to retrieve an object with the given primary key from the table associated with the specified type. Use of this method requires that the given type have a designated Primary\+Key (using the \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}).  \end{DoxyCompactList}\item 
+object \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a251c9d8747ad100740bf16918ba7e9ee}{Find}} (object pk, \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_table_mapping}{Table\+Mapping}} map)
+\begin{DoxyCompactList}\small\item\em Attempts to retrieve an object with the given primary key from the table associated with the specified type. Use of this method requires that the given type have a designated Primary\+Key (using the \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}).  \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a5b76672ef3876bb120b60ba08b8611eb}{Find$<$ T $>$}} (Expression$<$ Func$<$ T, bool $>$ $>$ predicate)
+\begin{DoxyCompactList}\small\item\em Attempts to retrieve the first object that matches the predicate from the table associated with the specified type.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_acf7812615d2363811e7dbd3da675de0e}{Begin\+Transaction}} ()
+\begin{DoxyCompactList}\small\item\em Begins a new transaction. Call \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad44a3c1767eb893f2b70e609ccec7967}{Commit}} to end the transaction.  \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a0b8c8fcd3895677b07fc1c613fefc6f3}{Save\+Transaction\+Point}} ()
+\begin{DoxyCompactList}\small\item\em Creates a savepoint in the database at the current point in the transaction timeline. Begins a new transaction if one is not in progress. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_adf5ddd8c4d552e45aaad7354522eaf9f}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_adf5ddd8c4d552e45aaad7354522eaf9f}} 
+void {\bfseries Rollback} ()
+\begin{DoxyCompactList}\small\item\em Rolls back the transaction that was begun by \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_acf7812615d2363811e7dbd3da675de0e}{Begin\+Transaction}} or \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a0b8c8fcd3895677b07fc1c613fefc6f3}{Save\+Transaction\+Point}}.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a1d32ee1191bb5046137a93856eabe85d}{Rollback\+To}} (string savepoint)
+\begin{DoxyCompactList}\small\item\em Rolls back the savepoint created by \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_acf7812615d2363811e7dbd3da675de0e}{Begin\+Transaction}} or Save\+Transaction\+Point.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a579cff32cef7356c2649a21e6d179239}{Release}} (string savepoint)
+\begin{DoxyCompactList}\small\item\em Releases a savepoint returned from \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a0b8c8fcd3895677b07fc1c613fefc6f3}{Save\+Transaction\+Point}}. Releasing a savepoint makes changes since that savepoint permanent if the savepoint began the transaction, or otherwise the changes are permanent pending a call to \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad44a3c1767eb893f2b70e609ccec7967}{Commit}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad44a3c1767eb893f2b70e609ccec7967}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad44a3c1767eb893f2b70e609ccec7967}} 
+void {\bfseries Commit} ()
+\begin{DoxyCompactList}\small\item\em Commits the transaction that was begun by \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_acf7812615d2363811e7dbd3da675de0e}{Begin\+Transaction}}.  \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a141b1ce53970d4ab2dc0025208b62263}{Run\+In\+Transaction}} (Action action)
+\begin{DoxyCompactList}\small\item\em Executes 
+\begin{DoxyParams}{Parameters}
+{\em action} & within a (possibly nested) transaction by wrapping it in a SAVEPOINT. If an exception occurs the whole transaction is rolled back, not just the current savepoint. The exception is rethrown.  \\
+\hline
+\end{DoxyParams}
+\end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a29dc130d4ecfb9337d8ea77c25296b92}{Run\+In\+Database\+Lock}} (Action action)
+\begin{DoxyCompactList}\small\item\em Executes 
+\begin{DoxyParams}{Parameters}
+{\em action} & while blocking other threads to access the same database.  \\
+\hline
+\end{DoxyParams}
+\end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a7071ef08c373d9df0fdfe82b1e0f6b2d}{Insert\+All}} (System.\+Collections.\+IEnumerable objects)
+\begin{DoxyCompactList}\small\item\em Inserts all specified objects.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aad5d8d2f78d47f57629c38823e1f2717}{Insert\+All}} (System.\+Collections.\+IEnumerable objects, string extra)
+\begin{DoxyCompactList}\small\item\em Inserts all specified objects.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aa1caf036b9a91e7736299db3ea08d030}{Insert\+All}} (System.\+Collections.\+IEnumerable objects, Type obj\+Type)
+\begin{DoxyCompactList}\small\item\em Inserts all specified objects.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad4d0c01f3d27e270c59394492bc57781}{Insert}} (object obj)
+\begin{DoxyCompactList}\small\item\em Inserts the given object and retrieves its auto incremented primary key if it has one.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a31afbba5e236b3d3f1c2ba42fcc65cd4}{Insert\+Or\+Replace}} (object obj)
+\begin{DoxyCompactList}\small\item\em Inserts the given object and retrieves its auto incremented primary key if it has one. If a UNIQUE constraint violation occurs with some pre-\/existing object, this function deletes the old object.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a4476b7e6f23b2c0152637e2d268e6242}{Insert}} (object obj, Type obj\+Type)
+\begin{DoxyCompactList}\small\item\em Inserts the given object and retrieves its auto incremented primary key if it has one.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a017a5cae945212127dca77524bbfa197}{Insert\+Or\+Replace}} (object obj, Type obj\+Type)
+\begin{DoxyCompactList}\small\item\em Inserts the given object and retrieves its auto incremented primary key if it has one. If a UNIQUE constraint violation occurs with some pre-\/existing object, this function deletes the old object.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aa1f620a1de38a5beae20f41fd3beb8ca}{Insert}} (object obj, string extra)
+\begin{DoxyCompactList}\small\item\em Inserts the given object and retrieves its auto incremented primary key if it has one.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a128fbdb55d52ce57872c3aae9a9c473e}{Insert}} (object obj, string extra, Type obj\+Type)
+\begin{DoxyCompactList}\small\item\em Inserts the given object and retrieves its auto incremented primary key if it has one.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad9b56c05cbe1a02b85fcd80b1b46f6f5}{Update}} (object obj)
+\begin{DoxyCompactList}\small\item\em Updates all of the columns of a table using the specified object except for its primary key. The object is required to have a primary key.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aae2727424ec978a29652ad4bf2debba3}{Update}} (object obj, Type obj\+Type)
+\begin{DoxyCompactList}\small\item\em Updates all of the columns of a table using the specified object except for its primary key. The object is required to have a primary key.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a318f04f661f0dab4987922427aac9a45}{Update\+All}} (System.\+Collections.\+IEnumerable objects)
+\begin{DoxyCompactList}\small\item\em Updates all specified objects.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a9ade3024c2722905f7ed9bf1917adeaa}{Delete}} (object object\+To\+Delete)
+\begin{DoxyCompactList}\small\item\em Deletes the given object from the database using its primary key.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a8c0980e1a8f9cac9471607f81ff61085}{Delete$<$ T $>$}} (object primary\+Key)
+\begin{DoxyCompactList}\small\item\em Deletes the object with the specified primary key.  \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a95dd327f91b433858bfe22e1ab42a2cf}{Delete\+All$<$ T $>$}} ()
+\begin{DoxyCompactList}\small\item\em Deletes all the objects from the specified table. WARNING WARNING\+: Let me repeat. It deletes ALL the objects from the specified table. Do you really want to do that?  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a12d7f9cceeb11afb8528d00a443f8f3c}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a12d7f9cceeb11afb8528d00a443f8f3c}} 
+void {\bfseries Dispose} ()
+\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a4b8c51e16479369814bf70cac2f54a41}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a4b8c51e16479369814bf70cac2f54a41}} 
+void {\bfseries Close} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}} \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ac93436f5fab4ca5054cabb04d89b7a23}{New\+Command}} ()
+\begin{DoxyCompactList}\small\item\em Creates a new \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}}. Can be overridden to provide a sub-\/class.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ae6e5f0b978413a2542767e9a1be37297}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ae6e5f0b978413a2542767e9a1be37297}} 
+virtual void {\bfseries Dispose} (bool disposing)
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ab19b16f989fbfd8dd27bfc5e1097e832}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ab19b16f989fbfd8dd27bfc5e1097e832}} 
+Sqlite3\+Database\+Handle {\bfseries Handle}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a5f843ccf676a833091d1b284e6fc90b8}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a5f843ccf676a833091d1b284e6fc90b8}} 
+string {\bfseries Database\+Path}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a7537cbca403311da8578a9b61d56a56a}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a7537cbca403311da8578a9b61d56a56a}} 
+bool {\bfseries Trace}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_af96adaa2a3a5a4601e757efcc95c96e5}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_af96adaa2a3a5a4601e757efcc95c96e5}} 
+bool {\bfseries Time\+Execution}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ac81f0fa6aaf66abe9114a16661b05743}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ac81f0fa6aaf66abe9114a16661b05743}} 
+bool {\bfseries Store\+Date\+Time\+As\+Ticks}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+object \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_afedc4cba5e64cd6f0234f7a4f232c1cd}{Sync\+Object}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Gets the synchronous object, to be lock the database file for updating.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a314a3f6dde6405364342ee8759ad244a}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a314a3f6dde6405364342ee8759ad244a}} 
+Time\+Span {\bfseries Busy\+Timeout}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Sets a busy handler to sleep the specified amount of time when a table is locked. The handler will sleep multiple times until a total time of \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a314a3f6dde6405364342ee8759ad244a}{Busy\+Timeout}} has accumulated.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aedb3d0ee35d1096389e955478a4c94c6}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aedb3d0ee35d1096389e955478a4c94c6}} 
+IEnumerable$<$ \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_table_mapping}{Table\+Mapping}} $>$ {\bfseries Table\+Mappings}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Returns the mappings from types to tables that the connection currently understands.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a251e350a85e0caa8cf58ffccd7250a3d}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a251e350a85e0caa8cf58ffccd7250a3d}} 
+bool {\bfseries Is\+In\+Transaction}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Whether \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_acf7812615d2363811e7dbd3da675de0e}{Begin\+Transaction}} has been called and the database is waiting for a \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad44a3c1767eb893f2b70e609ccec7967}{Commit}}.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_add6262baf22ca17ed3aee6adcd17ae5f}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_add6262baf22ca17ed3aee6adcd17ae5f}} 
+Trace\+Handler {\bfseries Trace\+Event}
+\item 
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ae03c9e20b03c257537375b40e652e029}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ae03c9e20b03c257537375b40e652e029}} 
+Time\+Execution\+Handler {\bfseries Time\+Execution\+Event}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an open connection to a SQLite database.  
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ac9bb301501b496d8a93c5c79e7edbd00}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ac9bb301501b496d8a93c5c79e7edbd00}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!SQLiteConnection@{SQLiteConnection}}
+\index{SQLiteConnection@{SQLiteConnection}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{SQLiteConnection()}{SQLiteConnection()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily SQLite4\+Unity3d.\+SQLite\+Connection.\+SQLite\+Connection (\begin{DoxyParamCaption}\item[{string}]{database\+Path,  }\item[{bool}]{store\+Date\+Time\+As\+Ticks = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection}{SQLite\+Connection}} and opens a SQLite database specified by database\+Path.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em database\+Path} & Specifies the path to the database file. \\
+\hline
+{\em store\+Date\+Time\+As\+Ticks} & Specifies whether to store Date\+Time properties as ticks (true) or strings (false). You absolutely do want to store them as Ticks in all new projects. The default of false is only here for backwards compatibility. There is a {\itshape significant} speed advantage, with no down sides, when setting store\+Date\+Time\+As\+Ticks = true. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a03781f73cf0b1b2c9e85fe96182adfa1}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a03781f73cf0b1b2c9e85fe96182adfa1}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!SQLiteConnection@{SQLiteConnection}}
+\index{SQLiteConnection@{SQLiteConnection}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{SQLiteConnection()}{SQLiteConnection()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily SQLite4\+Unity3d.\+SQLite\+Connection.\+SQLite\+Connection (\begin{DoxyParamCaption}\item[{string}]{database\+Path,  }\item[{SQLite\+Open\+Flags}]{open\+Flags,  }\item[{bool}]{store\+Date\+Time\+As\+Ticks = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Constructs a new \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection}{SQLite\+Connection}} and opens a SQLite database specified by database\+Path.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em database\+Path} & Specifies the path to the database file. \\
+\hline
+{\em store\+Date\+Time\+As\+Ticks} & Specifies whether to store Date\+Time properties as ticks (true) or strings (false). You absolutely do want to store them as Ticks in all new projects. The default of false is only here for backwards compatibility. There is a {\itshape significant} speed advantage, with no down sides, when setting store\+Date\+Time\+As\+Ticks = true. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_acf7812615d2363811e7dbd3da675de0e}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_acf7812615d2363811e7dbd3da675de0e}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!BeginTransaction@{BeginTransaction}}
+\index{BeginTransaction@{BeginTransaction}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{BeginTransaction()}{BeginTransaction()}}
+{\footnotesize\ttfamily void SQLite4\+Unity3d.\+SQLite\+Connection.\+Begin\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Begins a new transaction. Call \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad44a3c1767eb893f2b70e609ccec7967}{Commit}} to end the transaction.  
+
+Throws if a transaction has already begun.\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ae0b1b6274d532d0f3de0c7375258277f}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ae0b1b6274d532d0f3de0c7375258277f}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!CreateCommand@{CreateCommand}}
+\index{CreateCommand@{CreateCommand}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{CreateCommand()}{CreateCommand()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}} SQLite4\+Unity3d.\+SQLite\+Connection.\+Create\+Command (\begin{DoxyParamCaption}\item[{string}]{cmd\+Text,  }\item[{params object\mbox{[}$\,$\mbox{]}}]{ps }\end{DoxyParamCaption})}
+
+
+
+Creates a new \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}} given the command text with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd\+Text} & The fully escaped SQL. \\
+\hline
+{\em args} & Arguments to substitute for the occurences of \textquotesingle{}?\textquotesingle{} in the command text. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a523505494e5fcc19042e4a5d12d7c7cd}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a523505494e5fcc19042e4a5d12d7c7cd}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!CreateIndex@{CreateIndex}}
+\index{CreateIndex@{CreateIndex}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{CreateIndex()}{CreateIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Create\+Index (\begin{DoxyParamCaption}\item[{string}]{index\+Name,  }\item[{string}]{table\+Name,  }\item[{string}]{column\+Name,  }\item[{bool}]{unique = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Creates an index for the specified table and column.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em index\+Name} & Name of the index to create\\
+\hline
+{\em table\+Name} & Name of the database table\\
+\hline
+{\em column\+Name} & Name of the column to index\\
+\hline
+{\em unique} & Whether the index should be unique\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ab8aee23bb3b823fd893bfea314e51cd3}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ab8aee23bb3b823fd893bfea314e51cd3}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!CreateIndex@{CreateIndex}}
+\index{CreateIndex@{CreateIndex}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{CreateIndex()}{CreateIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Create\+Index (\begin{DoxyParamCaption}\item[{string}]{index\+Name,  }\item[{string}]{table\+Name,  }\item[{string\mbox{[}$\,$\mbox{]}}]{column\+Names,  }\item[{bool}]{unique = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Creates an index for the specified table and columns.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em index\+Name} & Name of the index to create\\
+\hline
+{\em table\+Name} & Name of the database table\\
+\hline
+{\em column\+Names} & An array of column names to index\\
+\hline
+{\em unique} & Whether the index should be unique\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aebc2e2c6d977b45bd730d4d3fb16af52}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aebc2e2c6d977b45bd730d4d3fb16af52}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!CreateIndex@{CreateIndex}}
+\index{CreateIndex@{CreateIndex}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{CreateIndex()}{CreateIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Create\+Index (\begin{DoxyParamCaption}\item[{string}]{table\+Name,  }\item[{string}]{column\+Name,  }\item[{bool}]{unique = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Creates an index for the specified table and column.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Name} & Name of the database table\\
+\hline
+{\em column\+Name} & Name of the column to index\\
+\hline
+{\em unique} & Whether the index should be unique\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_adbd1e8d5504dfaf9d4bf4eace79f9ed9}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_adbd1e8d5504dfaf9d4bf4eace79f9ed9}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!CreateIndex@{CreateIndex}}
+\index{CreateIndex@{CreateIndex}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{CreateIndex()}{CreateIndex()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Create\+Index (\begin{DoxyParamCaption}\item[{string}]{table\+Name,  }\item[{string\mbox{[}$\,$\mbox{]}}]{column\+Names,  }\item[{bool}]{unique = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Creates an index for the specified table and columns.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em table\+Name} & Name of the database table\\
+\hline
+{\em column\+Names} & An array of column names to index\\
+\hline
+{\em unique} & Whether the index should be unique\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_af2da5059105f533d02e4f1193b1714f3}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_af2da5059105f533d02e4f1193b1714f3}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!CreateIndex$<$ T $>$@{CreateIndex$<$ T $>$}}
+\index{CreateIndex$<$ T $>$@{CreateIndex$<$ T $>$}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{CreateIndex$<$ T $>$()}{CreateIndex< T >()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ab8aee23bb3b823fd893bfea314e51cd3}{SQLite4\+Unity3d.\+SQLite\+Connection.\+Create\+Index}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ T, object $>$ $>$}]{property,  }\item[{bool}]{unique = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Creates an index for the specified object property. e.\+g. Create\+Index$<$\+Client$>$(c =\texorpdfstring{$>$}{>} c.\+Name);  
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Type to reflect to a database table.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em property} & Property to index\\
+\hline
+{\em unique} & Whether the index should be unique\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a01aba09c5ace356f03f667a416017f6b}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a01aba09c5ace356f03f667a416017f6b}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!CreateTable@{CreateTable}}
+\index{CreateTable@{CreateTable}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{CreateTable()}{CreateTable()}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Create\+Table (\begin{DoxyParamCaption}\item[{Type}]{ty,  }\item[{Create\+Flags}]{create\+Flags = {\ttfamily CreateFlags.None} }\end{DoxyParamCaption})}
+
+
+
+Executes a \char`\"{}create table if not exists\char`\"{} on the database. It also creates any specified indexes on the columns of the table. It uses a schema automatically generated from the specified type. You can later access this schema by calling Get\+Mapping.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em ty} & Type to reflect to a database table.\\
+\hline
+{\em create\+Flags} & Optional flags allowing implicit PK and indexes based on naming conventions.\\
+\hline
+\end{DoxyParams}
+~\newline
+ \begin{DoxyReturn}{Returns}
+The number of entries added to the database schema. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a8e88e22239c2e4b899a5f6bbc7ecccb7}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a8e88e22239c2e4b899a5f6bbc7ecccb7}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!CreateTable$<$ T $>$@{CreateTable$<$ T $>$}}
+\index{CreateTable$<$ T $>$@{CreateTable$<$ T $>$}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{CreateTable$<$ T $>$()}{CreateTable< T >()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a01aba09c5ace356f03f667a416017f6b}{SQLite4\+Unity3d.\+SQLite\+Connection.\+Create\+Table}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{Create\+Flags}]{create\+Flags = {\ttfamily CreateFlags.None} }\end{DoxyParamCaption})}
+
+
+
+Executes a \char`\"{}create table if not exists\char`\"{} on the database. It also creates any specified indexes on the columns of the table. It uses a schema automatically generated from the specified type. You can later access this schema by calling Get\+Mapping.  
+
+\begin{DoxyReturn}{Returns}
+The number of entries added to the database schema. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_abdc098ec22df2d7f551933f4a71c3618}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_abdc098ec22df2d7f551933f4a71c3618}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!DeferredQuery@{DeferredQuery}}
+\index{DeferredQuery@{DeferredQuery}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{DeferredQuery()}{DeferredQuery()}}
+{\footnotesize\ttfamily IEnumerable$<$ object $>$ SQLite4\+Unity3d.\+SQLite\+Connection.\+Deferred\+Query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_table_mapping}{Table\+Mapping}}}]{map,  }\item[{string}]{query,  }\item[{params object\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. It returns each row of the result using the specified mapping. This function is only used by libraries in order to query the database via introspection. It is normally not used.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & A \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_table_mapping}{Table\+Mapping}} to use to convert the resulting rows into objects. \\
+\hline
+{\em query} & The fully escaped SQL. \\
+\hline
+{\em args} & Arguments to substitute for the occurences of \textquotesingle{}?\textquotesingle{} in the query. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An enumerable with one result for each row returned by the query. The enumerator will call sqlite3\+\_\+step on each call to Move\+Next, so the database connection must remain open for the lifetime of the enumerator. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a1ee4dc9cf80ec0c43b0eac5b90f2c966}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a1ee4dc9cf80ec0c43b0eac5b90f2c966}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!DeferredQuery$<$ T $>$@{DeferredQuery$<$ T $>$}}
+\index{DeferredQuery$<$ T $>$@{DeferredQuery$<$ T $>$}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{DeferredQuery$<$ T $>$()}{DeferredQuery< T >()}}
+{\footnotesize\ttfamily IEnumerable$<$ T $>$ \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_abdc098ec22df2d7f551933f4a71c3618}{SQLite4\+Unity3d.\+SQLite\+Connection.\+Deferred\+Query}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{query,  }\item[{params object\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. It returns each row of the result using the mapping automatically generated for the given type.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & The fully escaped SQL. \\
+\hline
+{\em args} & Arguments to substitute for the occurences of \textquotesingle{}?\textquotesingle{} in the query. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An enumerable with one result for each row returned by the query. The enumerator will call sqlite3\+\_\+step on each call to Move\+Next, so the database connection must remain open for the lifetime of the enumerator. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a9ade3024c2722905f7ed9bf1917adeaa}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a9ade3024c2722905f7ed9bf1917adeaa}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!Delete@{Delete}}
+\index{Delete@{Delete}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Delete (\begin{DoxyParamCaption}\item[{object}]{object\+To\+Delete }\end{DoxyParamCaption})}
+
+
+
+Deletes the given object from the database using its primary key.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em object\+To\+Delete} & The object to delete. It must have a primary key designated using the \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows deleted. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a8c0980e1a8f9cac9471607f81ff61085}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a8c0980e1a8f9cac9471607f81ff61085}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!Delete$<$ T $>$@{Delete$<$ T $>$}}
+\index{Delete$<$ T $>$@{Delete$<$ T $>$}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Delete$<$ T $>$()}{Delete< T >()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a9ade3024c2722905f7ed9bf1917adeaa}{SQLite4\+Unity3d.\+SQLite\+Connection.\+Delete}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{object}]{primary\+Key }\end{DoxyParamCaption})}
+
+
+
+Deletes the object with the specified primary key.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em primary\+Key} & The primary key of the object to delete. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of objects deleted. 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of object. \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a95dd327f91b433858bfe22e1ab42a2cf}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a95dd327f91b433858bfe22e1ab42a2cf}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!DeleteAll$<$ T $>$@{DeleteAll$<$ T $>$}}
+\index{DeleteAll$<$ T $>$@{DeleteAll$<$ T $>$}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{DeleteAll$<$ T $>$()}{DeleteAll< T >()}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Delete\+All$<$ T $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Deletes all the objects from the specified table. WARNING WARNING\+: Let me repeat. It deletes ALL the objects from the specified table. Do you really want to do that?  
+
+\begin{DoxyReturn}{Returns}
+The number of objects deleted. 
+\end{DoxyReturn}
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & The type of objects to delete. \\
+\hline
+\end{DoxyTemplParams}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_af284b293344f5c9dfd2c902c7e2c3215}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_af284b293344f5c9dfd2c902c7e2c3215}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!Execute@{Execute}}
+\index{Execute@{Execute}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Execute (\begin{DoxyParamCaption}\item[{string}]{query,  }\item[{params object\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. Use this method instead of Query when you don\textquotesingle{}t expect rows back. Such cases include INSERTs, UPDATEs, and DELETEs. You can set the Trace or Time\+Execution properties of the connection to profile execution.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & The fully escaped SQL. \\
+\hline
+{\em args} & Arguments to substitute for the occurences of \textquotesingle{}?\textquotesingle{} in the query. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows modified in the database as a result of this execution. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a251c9d8747ad100740bf16918ba7e9ee}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a251c9d8747ad100740bf16918ba7e9ee}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!Find@{Find}}
+\index{Find@{Find}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Find()}{Find()}}
+{\footnotesize\ttfamily object SQLite4\+Unity3d.\+SQLite\+Connection.\+Find (\begin{DoxyParamCaption}\item[{object}]{pk,  }\item[{\mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_table_mapping}{Table\+Mapping}}}]{map }\end{DoxyParamCaption})}
+
+
+
+Attempts to retrieve an object with the given primary key from the table associated with the specified type. Use of this method requires that the given type have a designated Primary\+Key (using the \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}).  
+
+
+\begin{DoxyParams}{Parameters}
+{\em pk} & The primary key. \\
+\hline
+{\em map} & The \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_table_mapping}{Table\+Mapping}} used to identify the object type. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The object with the given primary key or null if the object is not found. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a5b76672ef3876bb120b60ba08b8611eb}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a5b76672ef3876bb120b60ba08b8611eb}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!Find$<$ T $>$@{Find$<$ T $>$}}
+\index{Find$<$ T $>$@{Find$<$ T $>$}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Find$<$ T $>$()}{Find< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a251c9d8747ad100740bf16918ba7e9ee}{SQLite4\+Unity3d.\+SQLite\+Connection.\+Find}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ T, bool $>$ $>$}]{predicate }\end{DoxyParamCaption})}
+
+
+
+Attempts to retrieve the first object that matches the predicate from the table associated with the specified type.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em predicate} & A predicate for which object to find. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The object that matches the given predicate or null if the object is not found. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_acd2d58eefe5b4cc299c568dbe3189e66}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_acd2d58eefe5b4cc299c568dbe3189e66}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!Find$<$ T $>$@{Find$<$ T $>$}}
+\index{Find$<$ T $>$@{Find$<$ T $>$}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Find$<$ T $>$()}{Find< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily T \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a251c9d8747ad100740bf16918ba7e9ee}{SQLite4\+Unity3d.\+SQLite\+Connection.\+Find}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{object}]{pk }\end{DoxyParamCaption})}
+
+
+
+Attempts to retrieve an object with the given primary key from the table associated with the specified type. Use of this method requires that the given type have a designated Primary\+Key (using the \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}).  
+
+
+\begin{DoxyParams}{Parameters}
+{\em pk} & The primary key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The object with the given primary key or null if the object is not found. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a374b6422289401a9ceac927e5208133e}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a374b6422289401a9ceac927e5208133e}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!Get$<$ T $>$@{Get$<$ T $>$}}
+\index{Get$<$ T $>$@{Get$<$ T $>$}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Get$<$ T $>$()}{Get< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily T SQLite4\+Unity3d.\+SQLite\+Connection.\+Get$<$ T $>$ (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ T, bool $>$ $>$}]{predicate }\end{DoxyParamCaption})}
+
+
+
+Attempts to retrieve the first object that matches the t from the table associated with the specified type.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em predicate} & A predicate for which object to find. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The object that matches the given predicate. Throws a not found exception if the object is not found. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a943303f56c4911727e0206feefdfff55}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a943303f56c4911727e0206feefdfff55}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!Get$<$ T $>$@{Get$<$ T $>$}}
+\index{Get$<$ T $>$@{Get$<$ T $>$}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Get$<$ T $>$()}{Get< T >()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily T SQLite4\+Unity3d.\+SQLite\+Connection.\+Get$<$ T $>$ (\begin{DoxyParamCaption}\item[{object}]{pk }\end{DoxyParamCaption})}
+
+
+
+Attempts to retrieve an object with the given primary key from the table associated with the specified type. Use of this method requires that the given type have a designated Primary\+Key (using the \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}).  
+
+
+\begin{DoxyParams}{Parameters}
+{\em pk} & The primary key. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The object with the given primary key. Throws a not found exception if the object is not found. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a6d27d4a7d7b2f0896fd22cb09238b5b7}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a6d27d4a7d7b2f0896fd22cb09238b5b7}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!GetMapping@{GetMapping}}
+\index{GetMapping@{GetMapping}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{GetMapping()}{GetMapping()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_table_mapping}{Table\+Mapping}} SQLite4\+Unity3d.\+SQLite\+Connection.\+Get\+Mapping (\begin{DoxyParamCaption}\item[{Type}]{type,  }\item[{Create\+Flags}]{create\+Flags = {\ttfamily CreateFlags.None} }\end{DoxyParamCaption})}
+
+
+
+Retrieves the mapping that is automatically generated for the given type.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & The type whose mapping to the database is returned. \\
+\hline
+\end{DoxyParams}
+~\newline
+ 
+\begin{DoxyParams}{Parameters}
+{\em create\+Flags} & Optional flags allowing implicit PK and indexes based on naming conventions \\
+\hline
+\end{DoxyParams}
+~\newline
+ \begin{DoxyReturn}{Returns}
+The mapping represents the schema of the columns of the database and contains methods to set and get properties of objects. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a4469620d740de496c68b4843265621f2}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a4469620d740de496c68b4843265621f2}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!GetMapping$<$ T $>$@{GetMapping$<$ T $>$}}
+\index{GetMapping$<$ T $>$@{GetMapping$<$ T $>$}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{GetMapping$<$ T $>$()}{GetMapping< T >()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_table_mapping}{Table\+Mapping}} \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a6d27d4a7d7b2f0896fd22cb09238b5b7}{SQLite4\+Unity3d.\+SQLite\+Connection.\+Get\+Mapping}}$<$ T $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves the mapping that is automatically generated for the given type.  
+
+\begin{DoxyReturn}{Returns}
+The mapping represents the schema of the columns of the database and contains methods to set and get properties of objects. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad4d0c01f3d27e270c59394492bc57781}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad4d0c01f3d27e270c59394492bc57781}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!Insert@{Insert}}
+\index{Insert@{Insert}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Insert (\begin{DoxyParamCaption}\item[{object}]{obj }\end{DoxyParamCaption})}
+
+
+
+Inserts the given object and retrieves its auto incremented primary key if it has one.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows added to the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aa1f620a1de38a5beae20f41fd3beb8ca}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aa1f620a1de38a5beae20f41fd3beb8ca}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!Insert@{Insert}}
+\index{Insert@{Insert}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Insert (\begin{DoxyParamCaption}\item[{object}]{obj,  }\item[{string}]{extra }\end{DoxyParamCaption})}
+
+
+
+Inserts the given object and retrieves its auto incremented primary key if it has one.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to insert. \\
+\hline
+{\em extra} & Literal SQL code that gets placed into the command. INSERT \{extra\} INTO ... \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows added to the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a128fbdb55d52ce57872c3aae9a9c473e}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a128fbdb55d52ce57872c3aae9a9c473e}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!Insert@{Insert}}
+\index{Insert@{Insert}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Insert (\begin{DoxyParamCaption}\item[{object}]{obj,  }\item[{string}]{extra,  }\item[{Type}]{obj\+Type }\end{DoxyParamCaption})}
+
+
+
+Inserts the given object and retrieves its auto incremented primary key if it has one.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to insert. \\
+\hline
+{\em extra} & Literal SQL code that gets placed into the command. INSERT \{extra\} INTO ... \\
+\hline
+{\em obj\+Type} & The type of object to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows added to the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a4476b7e6f23b2c0152637e2d268e6242}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a4476b7e6f23b2c0152637e2d268e6242}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!Insert@{Insert}}
+\index{Insert@{Insert}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Insert (\begin{DoxyParamCaption}\item[{object}]{obj,  }\item[{Type}]{obj\+Type }\end{DoxyParamCaption})}
+
+
+
+Inserts the given object and retrieves its auto incremented primary key if it has one.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to insert. \\
+\hline
+{\em obj\+Type} & The type of object to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows added to the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a7071ef08c373d9df0fdfe82b1e0f6b2d}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a7071ef08c373d9df0fdfe82b1e0f6b2d}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!InsertAll@{InsertAll}}
+\index{InsertAll@{InsertAll}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{InsertAll()}{InsertAll()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Insert\+All (\begin{DoxyParamCaption}\item[{System.\+Collections.\+IEnumerable}]{objects }\end{DoxyParamCaption})}
+
+
+
+Inserts all specified objects.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em objects} & An IEnumerable of the objects to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows added to the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aad5d8d2f78d47f57629c38823e1f2717}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aad5d8d2f78d47f57629c38823e1f2717}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!InsertAll@{InsertAll}}
+\index{InsertAll@{InsertAll}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{InsertAll()}{InsertAll()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Insert\+All (\begin{DoxyParamCaption}\item[{System.\+Collections.\+IEnumerable}]{objects,  }\item[{string}]{extra }\end{DoxyParamCaption})}
+
+
+
+Inserts all specified objects.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em objects} & An IEnumerable of the objects to insert. \\
+\hline
+{\em extra} & Literal SQL code that gets placed into the command. INSERT \{extra\} INTO ... \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows added to the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aa1caf036b9a91e7736299db3ea08d030}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aa1caf036b9a91e7736299db3ea08d030}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!InsertAll@{InsertAll}}
+\index{InsertAll@{InsertAll}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{InsertAll()}{InsertAll()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Insert\+All (\begin{DoxyParamCaption}\item[{System.\+Collections.\+IEnumerable}]{objects,  }\item[{Type}]{obj\+Type }\end{DoxyParamCaption})}
+
+
+
+Inserts all specified objects.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em objects} & An IEnumerable of the objects to insert. \\
+\hline
+{\em obj\+Type} & The type of object to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows added to the table. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a31afbba5e236b3d3f1c2ba42fcc65cd4}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a31afbba5e236b3d3f1c2ba42fcc65cd4}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!InsertOrReplace@{InsertOrReplace}}
+\index{InsertOrReplace@{InsertOrReplace}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{InsertOrReplace()}{InsertOrReplace()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Insert\+Or\+Replace (\begin{DoxyParamCaption}\item[{object}]{obj }\end{DoxyParamCaption})}
+
+
+
+Inserts the given object and retrieves its auto incremented primary key if it has one. If a UNIQUE constraint violation occurs with some pre-\/existing object, this function deletes the old object.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows modified. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a017a5cae945212127dca77524bbfa197}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a017a5cae945212127dca77524bbfa197}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!InsertOrReplace@{InsertOrReplace}}
+\index{InsertOrReplace@{InsertOrReplace}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{InsertOrReplace()}{InsertOrReplace()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Insert\+Or\+Replace (\begin{DoxyParamCaption}\item[{object}]{obj,  }\item[{Type}]{obj\+Type }\end{DoxyParamCaption})}
+
+
+
+Inserts the given object and retrieves its auto incremented primary key if it has one. If a UNIQUE constraint violation occurs with some pre-\/existing object, this function deletes the old object.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to insert. \\
+\hline
+{\em obj\+Type} & The type of object to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows modified. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ac93436f5fab4ca5054cabb04d89b7a23}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ac93436f5fab4ca5054cabb04d89b7a23}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!NewCommand@{NewCommand}}
+\index{NewCommand@{NewCommand}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{NewCommand()}{NewCommand()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}} SQLite4\+Unity3d.\+SQLite\+Connection.\+New\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Creates a new \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}}. Can be overridden to provide a sub-\/class.  
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command_ab2a78b9456c70c50270ba10b0f658ca8}{SQLite\+Command.\+On\+Instance\+Created}}
+
+
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad392931c515a51207384a6e30d073055}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad392931c515a51207384a6e30d073055}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!Query@{Query}}
+\index{Query@{Query}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Query()}{Query()}}
+{\footnotesize\ttfamily List$<$ object $>$ SQLite4\+Unity3d.\+SQLite\+Connection.\+Query (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_table_mapping}{Table\+Mapping}}}]{map,  }\item[{string}]{query,  }\item[{params object\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. It returns each row of the result using the specified mapping. This function is only used by libraries in order to query the database via introspection. It is normally not used.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & A \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_table_mapping}{Table\+Mapping}} to use to convert the resulting rows into objects. \\
+\hline
+{\em query} & The fully escaped SQL. \\
+\hline
+{\em args} & Arguments to substitute for the occurences of \textquotesingle{}?\textquotesingle{} in the query. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An enumerable with one result for each row returned by the query. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a9eb10028c2ecc28ae0831822244764d1}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a9eb10028c2ecc28ae0831822244764d1}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!Query$<$ T $>$@{Query$<$ T $>$}}
+\index{Query$<$ T $>$@{Query$<$ T $>$}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Query$<$ T $>$()}{Query< T >()}}
+{\footnotesize\ttfamily List$<$ T $>$ \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad392931c515a51207384a6e30d073055}{SQLite4\+Unity3d.\+SQLite\+Connection.\+Query}}$<$ T $>$ (\begin{DoxyParamCaption}\item[{string}]{query,  }\item[{params object\mbox{[}$\,$\mbox{]}}]{args }\end{DoxyParamCaption})}
+
+
+
+Creates a \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_command}{SQLite\+Command}} given the command text (SQL) with arguments. Place a \textquotesingle{}?\textquotesingle{} in the command text for each of the arguments and then executes that command. It returns each row of the result using the mapping automatically generated for the given type.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em query} & The fully escaped SQL. \\
+\hline
+{\em args} & Arguments to substitute for the occurences of \textquotesingle{}?\textquotesingle{} in the query. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An enumerable with one result for each row returned by the query. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a579cff32cef7356c2649a21e6d179239}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a579cff32cef7356c2649a21e6d179239}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!Release@{Release}}
+\index{Release@{Release}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Release()}{Release()}}
+{\footnotesize\ttfamily void SQLite4\+Unity3d.\+SQLite\+Connection.\+Release (\begin{DoxyParamCaption}\item[{string}]{savepoint }\end{DoxyParamCaption})}
+
+
+
+Releases a savepoint returned from \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a0b8c8fcd3895677b07fc1c613fefc6f3}{Save\+Transaction\+Point}}. Releasing a savepoint makes changes since that savepoint permanent if the savepoint began the transaction, or otherwise the changes are permanent pending a call to \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad44a3c1767eb893f2b70e609ccec7967}{Commit}}. 
+
+The RELEASE command is like a COMMIT for a SAVEPOINT.  
+\begin{DoxyParams}{Parameters}
+{\em savepoint} & The name of the savepoint to release. The string should be the result of a call to \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a0b8c8fcd3895677b07fc1c613fefc6f3}{Save\+Transaction\+Point}}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a1d32ee1191bb5046137a93856eabe85d}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a1d32ee1191bb5046137a93856eabe85d}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!RollbackTo@{RollbackTo}}
+\index{RollbackTo@{RollbackTo}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{RollbackTo()}{RollbackTo()}}
+{\footnotesize\ttfamily void SQLite4\+Unity3d.\+SQLite\+Connection.\+Rollback\+To (\begin{DoxyParamCaption}\item[{string}]{savepoint }\end{DoxyParamCaption})}
+
+
+
+Rolls back the savepoint created by \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_acf7812615d2363811e7dbd3da675de0e}{Begin\+Transaction}} or Save\+Transaction\+Point.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em savepoint} & The name of the savepoint to roll back to, as returned by \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a0b8c8fcd3895677b07fc1c613fefc6f3}{Save\+Transaction\+Point}}. If savepoint is null or empty, this method is equivalent to a call to \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_adf5ddd8c4d552e45aaad7354522eaf9f}{Rollback}}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a29dc130d4ecfb9337d8ea77c25296b92}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a29dc130d4ecfb9337d8ea77c25296b92}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!RunInDatabaseLock@{RunInDatabaseLock}}
+\index{RunInDatabaseLock@{RunInDatabaseLock}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{RunInDatabaseLock()}{RunInDatabaseLock()}}
+{\footnotesize\ttfamily void SQLite4\+Unity3d.\+SQLite\+Connection.\+Run\+In\+Database\+Lock (\begin{DoxyParamCaption}\item[{Action}]{action }\end{DoxyParamCaption})}
+
+
+
+Executes 
+\begin{DoxyParams}{Parameters}
+{\em action} & while blocking other threads to access the same database.  \\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The Action to perform within a lock. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a141b1ce53970d4ab2dc0025208b62263}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a141b1ce53970d4ab2dc0025208b62263}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!RunInTransaction@{RunInTransaction}}
+\index{RunInTransaction@{RunInTransaction}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{RunInTransaction()}{RunInTransaction()}}
+{\footnotesize\ttfamily void SQLite4\+Unity3d.\+SQLite\+Connection.\+Run\+In\+Transaction (\begin{DoxyParamCaption}\item[{Action}]{action }\end{DoxyParamCaption})}
+
+
+
+Executes 
+\begin{DoxyParams}{Parameters}
+{\em action} & within a (possibly nested) transaction by wrapping it in a SAVEPOINT. If an exception occurs the whole transaction is rolled back, not just the current savepoint. The exception is rethrown.  \\
+\hline
+\end{DoxyParams}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The Action to perform within a transaction. 
+\begin{DoxyParams}{Parameters}
+{\em action} & can contain any number of operations on the connection but should never call \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_acf7812615d2363811e7dbd3da675de0e}{Begin\+Transaction}} or \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad44a3c1767eb893f2b70e609ccec7967}{Commit}}. \\
+\hline
+\end{DoxyParams}
+\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a0b8c8fcd3895677b07fc1c613fefc6f3}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a0b8c8fcd3895677b07fc1c613fefc6f3}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!SaveTransactionPoint@{SaveTransactionPoint}}
+\index{SaveTransactionPoint@{SaveTransactionPoint}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{SaveTransactionPoint()}{SaveTransactionPoint()}}
+{\footnotesize\ttfamily string SQLite4\+Unity3d.\+SQLite\+Connection.\+Save\+Transaction\+Point (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Creates a savepoint in the database at the current point in the transaction timeline. Begins a new transaction if one is not in progress. 
+
+Call \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a1d32ee1191bb5046137a93856eabe85d}{Rollback\+To}} to undo transactions since the returned savepoint. Call \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a579cff32cef7356c2649a21e6d179239}{Release}} to commit transactions after the savepoint returned here. Call \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad44a3c1767eb893f2b70e609ccec7967}{Commit}} to end the transaction, committing all changes.  \begin{DoxyReturn}{Returns}
+A string naming the savepoint.
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ac592a646a6120f6c533243f42f380ebd}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ac592a646a6120f6c533243f42f380ebd}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!Table$<$ T $>$@{Table$<$ T $>$}}
+\index{Table$<$ T $>$@{Table$<$ T $>$}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Table$<$ T $>$()}{Table< T >()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_table_query}{Table\+Query}}$<$ T $>$ SQLite4\+Unity3d.\+SQLite\+Connection.\+Table$<$ T $>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a queryable interface to the table represented by the given type.  
+
+\begin{DoxyReturn}{Returns}
+A queryable object that is able to translate Where, Order\+By, and Take queries into native SQL. 
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em T} : {\em new()}]\end{description}
+\end{Desc}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad9b56c05cbe1a02b85fcd80b1b46f6f5}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_ad9b56c05cbe1a02b85fcd80b1b46f6f5}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!Update@{Update}}
+\index{Update@{Update}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Update (\begin{DoxyParamCaption}\item[{object}]{obj }\end{DoxyParamCaption})}
+
+
+
+Updates all of the columns of a table using the specified object except for its primary key. The object is required to have a primary key.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to update. It must have a primary key designated using the \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows updated. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aae2727424ec978a29652ad4bf2debba3}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_aae2727424ec978a29652ad4bf2debba3}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!Update@{Update}}
+\index{Update@{Update}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Update (\begin{DoxyParamCaption}\item[{object}]{obj,  }\item[{Type}]{obj\+Type }\end{DoxyParamCaption})}
+
+
+
+Updates all of the columns of a table using the specified object except for its primary key. The object is required to have a primary key.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em obj} & The object to update. It must have a primary key designated using the \mbox{\hyperlink{class_s_q_lite4_unity3d_1_1_primary_key_attribute}{Primary\+Key\+Attribute}}. \\
+\hline
+{\em obj\+Type} & The type of object to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows updated. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a318f04f661f0dab4987922427aac9a45}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_a318f04f661f0dab4987922427aac9a45}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!UpdateAll@{UpdateAll}}
+\index{UpdateAll@{UpdateAll}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{UpdateAll()}{UpdateAll()}}
+{\footnotesize\ttfamily int SQLite4\+Unity3d.\+SQLite\+Connection.\+Update\+All (\begin{DoxyParamCaption}\item[{System.\+Collections.\+IEnumerable}]{objects }\end{DoxyParamCaption})}
+
+
+
+Updates all specified objects.  
+
+
+\begin{DoxyParams}{Parameters}
+{\em objects} & An IEnumerable of the objects to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of rows modified. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\mbox{\Hypertarget{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_afedc4cba5e64cd6f0234f7a4f232c1cd}\label{class_s_q_lite4_unity3d_1_1_s_q_lite_connection_afedc4cba5e64cd6f0234f7a4f232c1cd}} 
+\index{SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}!SyncObject@{SyncObject}}
+\index{SyncObject@{SyncObject}!SQLite4Unity3d.SQLiteConnection@{SQLite4Unity3d.SQLiteConnection}}
+\doxysubsubsection{\texorpdfstring{SyncObject}{SyncObject}}
+{\footnotesize\ttfamily object SQLite4\+Unity3d.\+SQLite\+Connection.\+Sync\+Object\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Gets the synchronous object, to be lock the database file for updating.  
+
+The sync object.
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/hornf/\+Documents/\+Gits/pong/\+Unity/\+Pong/\+Assets/\+Scripts/\+Database/SQLite.\+cs\end{DoxyCompactItemize}

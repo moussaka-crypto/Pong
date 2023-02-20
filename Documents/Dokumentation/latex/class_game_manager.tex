@@ -1,0 +1,153 @@
+\hypertarget{class_game_manager}{}\doxysection{Game\+Manager Class Reference}
+\label{class_game_manager}\index{GameManager@{GameManager}}
+Inheritance diagram for Game\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_game_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_manager_a4f0f539e6f2af047df62f91faf35c95c}\label{class_game_manager_a4f0f539e6f2af047df62f91faf35c95c}} 
+void {\bfseries Ball\+Trigger} (Collision2D collision2D)
+\begin{DoxyCompactList}\small\item\em Is called by \mbox{\hyperlink{class_ball}{Ball}}, when entering a collision trigger  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_manager_aa4227cc15eb600dc14b012a248c78454}\label{class_game_manager_aa4227cc15eb600dc14b012a248c78454}} 
+void {\bfseries check\+For\+Highscore} ()
+\item 
+\mbox{\Hypertarget{class_game_manager_a96bb7455b09cd0191ae4dee16f7e2738}\label{class_game_manager_a96bb7455b09cd0191ae4dee16f7e2738}} 
+void {\bfseries safe\+Top\+Ten\+Score} ()
+\item 
+\mbox{\Hypertarget{class_game_manager_a10a380e37531a6dccd54530bd01a9fea}\label{class_game_manager_a10a380e37531a6dccd54530bd01a9fea}} 
+void {\bfseries Pause\+Overlay} ()
+\begin{DoxyCompactList}\small\item\em Scales up the Pause Overlay, when pause button is pressed  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_manager_a4c832ef536644f5f4d0262d952f05b1f}\label{class_game_manager_a4c832ef536644f5f4d0262d952f05b1f}} 
+void {\bfseries close\+Ad} ()
+\item 
+\mbox{\Hypertarget{class_game_manager_aa6a9712cae4fed93828265129e5c8e0e}\label{class_game_manager_aa6a9712cae4fed93828265129e5c8e0e}} 
+void {\bfseries open\+Ad} ()
+\item 
+\mbox{\Hypertarget{class_game_manager_a4fa5ffce1b66a781b7cc67cd188c7e58}\label{class_game_manager_a4fa5ffce1b66a781b7cc67cd188c7e58}} 
+void {\bfseries End\+Round\+From\+Pause} ()
+\begin{DoxyCompactList}\small\item\em Switches from Pause-\/ to Game Over Overlay when user wants to end the round manually  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_manager_ae6e984018f6a84c4f5fd65efc1527517}\label{class_game_manager_ae6e984018f6a84c4f5fd65efc1527517}} 
+void {\bfseries Resume\+From\+Pause} ()
+\item 
+\mbox{\Hypertarget{class_game_manager_adb110a6ef474e4ac7901176c97a859ab}\label{class_game_manager_adb110a6ef474e4ac7901176c97a859ab}} 
+void {\bfseries Pause\+Game} ()
+\item 
+\mbox{\Hypertarget{class_game_manager_a12a7d4b15fbc7407696b44648b96b5a7}\label{class_game_manager_a12a7d4b15fbc7407696b44648b96b5a7}} 
+void {\bfseries Resume\+Game} (Boolean show\+Ball=true)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_manager_ac941a6d232559db9b7ffd2043078d797}\label{class_game_manager_ac941a6d232559db9b7ffd2043078d797}} 
+\mbox{\hyperlink{class_ball}{Ball}} {\bfseries ball}
+\item 
+\mbox{\Hypertarget{class_game_manager_a4be7db32a1a503f525ab4beb2e8ddb71}\label{class_game_manager_a4be7db32a1a503f525ab4beb2e8ddb71}} 
+Game\+Object {\bfseries ball\+GO}
+\item 
+\mbox{\Hypertarget{class_game_manager_a5f9c27496ddea55ca13eb90eb00dd42d}\label{class_game_manager_a5f9c27496ddea55ca13eb90eb00dd42d}} 
+Game\+Object {\bfseries play\+Bar}
+\item 
+\mbox{\Hypertarget{class_game_manager_aa41080965078fe3fafa4f444bcf8161d}\label{class_game_manager_aa41080965078fe3fafa4f444bcf8161d}} 
+Game\+Object {\bfseries border\+Left}
+\item 
+\mbox{\Hypertarget{class_game_manager_af4dd5ce5d3bae6597ebf8b6fe6e311d0}\label{class_game_manager_af4dd5ce5d3bae6597ebf8b6fe6e311d0}} 
+Game\+Object {\bfseries border\+Right}
+\item 
+\mbox{\Hypertarget{class_game_manager_a07041ce0c0974284cfe75768d4db2e48}\label{class_game_manager_a07041ce0c0974284cfe75768d4db2e48}} 
+Game\+Object {\bfseries border\+Top}
+\item 
+\mbox{\Hypertarget{class_game_manager_a78c55655260937b50f0a8f85b31d7de7}\label{class_game_manager_a78c55655260937b50f0a8f85b31d7de7}} 
+Game\+Object {\bfseries border\+Bottom}
+\item 
+\mbox{\Hypertarget{class_game_manager_a5020da43160a57789abaa420ac96bd3b}\label{class_game_manager_a5020da43160a57789abaa420ac96bd3b}} 
+\mbox{\hyperlink{class_database_1_1_highscore_manager}{Highscore\+Manager}} {\bfseries hs\+Manager}
+\item 
+TMP\+\_\+\+Text \mbox{\hyperlink{class_game_manager_a4706c362e5c6efe98e1e4a73085e78b4}{txt\+Score\+Above}}
+\item 
+\mbox{\Hypertarget{class_game_manager_a6163b5b95c42552d39aa4c33ebe36e24}\label{class_game_manager_a6163b5b95c42552d39aa4c33ebe36e24}} 
+TMP\+\_\+\+Text {\bfseries txt\+Name\+Above}
+\item 
+\mbox{\Hypertarget{class_game_manager_ae46d0332ecc78496159fceb29bea5c7a}\label{class_game_manager_ae46d0332ecc78496159fceb29bea5c7a}} 
+TMP\+\_\+\+Text {\bfseries txt\+Rank\+Above}
+\item 
+\mbox{\Hypertarget{class_game_manager_a7aeb443985fb1be9e266e9921c9e6821}\label{class_game_manager_a7aeb443985fb1be9e266e9921c9e6821}} 
+TMP\+\_\+\+Text {\bfseries txt\+Score\+Mid}
+\item 
+\mbox{\Hypertarget{class_game_manager_ae6867b313b0da7c4e6b3e032705a34b3}\label{class_game_manager_ae6867b313b0da7c4e6b3e032705a34b3}} 
+TMP\+\_\+\+Text {\bfseries txt\+Name\+Mid}
+\item 
+\mbox{\Hypertarget{class_game_manager_af25c102ea69684b2725328caa2c8571e}\label{class_game_manager_af25c102ea69684b2725328caa2c8571e}} 
+TMP\+\_\+\+Text {\bfseries txt\+Rank\+Mid}
+\item 
+\mbox{\Hypertarget{class_game_manager_aaecd09038b074c5d87827d80f33f8f3f}\label{class_game_manager_aaecd09038b074c5d87827d80f33f8f3f}} 
+TMP\+\_\+\+Text {\bfseries txt\+Score\+Below}
+\item 
+\mbox{\Hypertarget{class_game_manager_ad7b9b794835abd32fcebe67b7e386197}\label{class_game_manager_ad7b9b794835abd32fcebe67b7e386197}} 
+TMP\+\_\+\+Text {\bfseries txt\+Name\+Below}
+\item 
+\mbox{\Hypertarget{class_game_manager_a644646ea34400099e4972f6da7294434}\label{class_game_manager_a644646ea34400099e4972f6da7294434}} 
+TMP\+\_\+\+Text {\bfseries txt\+Rank\+Below}
+\item 
+\mbox{\Hypertarget{class_game_manager_a52a7fc75c2f371d9195ed8c72555665f}\label{class_game_manager_a52a7fc75c2f371d9195ed8c72555665f}} 
+TMP\+\_\+\+Text {\bfseries txt\+Score}
+\item 
+\mbox{\Hypertarget{class_game_manager_acc0fd3ea2d78b7cadfcf96130b7d1fca}\label{class_game_manager_acc0fd3ea2d78b7cadfcf96130b7d1fca}} 
+TMP\+\_\+\+Text {\bfseries txt\+Final\+Score}
+\item 
+\mbox{\Hypertarget{class_game_manager_a1a534451bdf166d8401957fb09a26079}\label{class_game_manager_a1a534451bdf166d8401957fb09a26079}} 
+TMP\+\_\+\+Text {\bfseries txt\+Final\+Coins}
+\item 
+\mbox{\Hypertarget{class_game_manager_a54f7455e0746bbefb4cc6515ed975b74}\label{class_game_manager_a54f7455e0746bbefb4cc6515ed975b74}} 
+TMP\+\_\+\+Input\+Field {\bfseries player\+Name}
+\item 
+\mbox{\Hypertarget{class_game_manager_a2511276fe3dfdd98642f0bb1193e8541}\label{class_game_manager_a2511276fe3dfdd98642f0bb1193e8541}} 
+Game\+Object {\bfseries ad\+Overlay}
+\item 
+\mbox{\Hypertarget{class_game_manager_a0f69b135d9129ef7fc080df3adf8bfbb}\label{class_game_manager_a0f69b135d9129ef7fc080df3adf8bfbb}} 
+Game\+Object {\bfseries game\+Over\+Overlay}
+\item 
+\mbox{\Hypertarget{class_game_manager_af7643dc89e18dce87758e18ae9b2dec7}\label{class_game_manager_af7643dc89e18dce87758e18ae9b2dec7}} 
+Game\+Object {\bfseries pause\+Overlay}
+\item 
+\mbox{\Hypertarget{class_game_manager_a0b7ec11d8c099ac444bb1f07b1098ea3}\label{class_game_manager_a0b7ec11d8c099ac444bb1f07b1098ea3}} 
+Game\+Object {\bfseries safe\+Score\+Overlay}
+\item 
+\mbox{\Hypertarget{class_game_manager_afd6ae39f553ae6e43a5c8d4abdc969f7}\label{class_game_manager_afd6ae39f553ae6e43a5c8d4abdc969f7}} 
+Image\mbox{[}$\,$\mbox{]} {\bfseries img\+\_\+lives}
+\item 
+\mbox{\Hypertarget{class_game_manager_a618c785b9ad493f65c58188ef1686b1e}\label{class_game_manager_a618c785b9ad493f65c58188ef1686b1e}} 
+int {\bfseries lives}
+\item 
+\mbox{\Hypertarget{class_game_manager_a1700c21fa8f410bcad4e5873cec8df87}\label{class_game_manager_a1700c21fa8f410bcad4e5873cec8df87}} 
+Game\+Object {\bfseries shakeable}
+\item 
+\mbox{\Hypertarget{class_game_manager_a75beb95550df5f16134c4d1dbfc3cc36}\label{class_game_manager_a75beb95550df5f16134c4d1dbfc3cc36}} 
+Vector2 {\bfseries play\+Bar\+Pos}
+\item 
+\mbox{\Hypertarget{class_game_manager_a9d686acb928a896d4dfb1afee7d07195}\label{class_game_manager_a9d686acb928a896d4dfb1afee7d07195}} 
+float {\bfseries play\+Bar\+Speed}
+\item 
+\mbox{\Hypertarget{class_game_manager_a0ebd2464dcab751c274f5ce02607d8a1}\label{class_game_manager_a0ebd2464dcab751c274f5ce02607d8a1}} 
+TMP\+\_\+\+Text {\bfseries fps\+Text}
+\item 
+\mbox{\Hypertarget{class_game_manager_a554a4cfb4354d133f7d4eb0aee34ce42}\label{class_game_manager_a554a4cfb4354d133f7d4eb0aee34ce42}} 
+float {\bfseries delta\+Time}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_game_manager_a4706c362e5c6efe98e1e4a73085e78b4}\label{class_game_manager_a4706c362e5c6efe98e1e4a73085e78b4}} 
+\index{GameManager@{GameManager}!txtScoreAbove@{txtScoreAbove}}
+\index{txtScoreAbove@{txtScoreAbove}!GameManager@{GameManager}}
+\doxysubsubsection{\texorpdfstring{txtScoreAbove}{txtScoreAbove}}
+{\footnotesize\ttfamily TMP\+\_\+\+Text Game\+Manager.\+txt\+Score\+Above}
+
+Highscore Overlay 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/hornf/\+Documents/\+Gits/pong/\+Unity/\+Pong/\+Assets/\+Scripts/\+Pong\+System/Game\+Manager.\+cs\end{DoxyCompactItemize}

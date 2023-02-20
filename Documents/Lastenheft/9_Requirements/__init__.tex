@@ -1,0 +1,287 @@
+\subsection{Systeme / Arbeitspakete}
+
+%\newcommand{\OPT}[1]{{\color{teal} #1}}
+
+
+% use 2 variables for Category and System ref
+\newcommand{\CAT}{F}
+\newcommand{\SYS}{\ref*{sys:ui}}
+\newcommand{\setCategory}[1]{ \gdef\CAT{#1} }
+\newcommand{\setSystem}[1]{ \gdef\SYS{#1}\hspace*{-9px}\setcounter{rowcntr}{0} }
+
+\newcounter{rowcntr}[table]                             % create a new counter
+\AtBeginEnvironment{tabular}{\setcounter{rowcntr}{0}}   % Reset the rowcntr counter at each new tabular
+\renewcommand{\therowcntr}{\CAT-\SYS-\arabic{rowcntr}}  % define the layout of the counter value
+
+% \renewcommand{\therowcntr}{\thetable.\arabic{rowcntr}}
+% % A new columntype to apply automatic stepping
+% \newcolumntype{N}{>{\refstepcounter{rowcntr}\therowcntr}c}
+
+% This function inserts the counter into a table row and creates a label at it's position
+\newcommand{\REQ}[1]{
+    \refstepcounter{rowcntr}
+    \therowcntr
+    \label{#1} 
+}
+
+
+
+
+Zur besseren Übersichtlichkeit und Verteilung kleinerer Aufgabenpakete wird die Applikation in folgende
+Subsysteme unterteilt:
+
+\begin{enumerate}
+    \item \label{sys:gen} Generelles
+    \item \label{sys:ui} User Interface \& Menüs
+    \item \label{sys:ls} Life System
+    \item \label{sys:cm} Classic-Mode
+    \item \label{sys:inv} Invasion-Mode
+    \item \label{sys:scs} Scoring System
+    \item \label{sys:cur} Currency System
+\end{enumerate}
+
+\subsection{Requirements}
+
+Requirements werden unterteilt in die folgenden Gruppen:
+
+\begin{itemize}
+    \item Functional: Funktionale Anforderungen
+    \item Design: Rahmenanforderungen / Designbestimmungen
+    \item Performance: Quantisierbare Leistungsanforderungen
+    \item Operational: Nutzungsanforderungen und Umgebungseinschränkungen
+\end{itemize}
+
+Jedes Requirement besteht aus einer eindeutigen ID, die sich zusammensetzt aus:
+
+\begin{itemize}
+    \item Requirement Typ (F/D/P/O)
+    \item Subsystem Nummer (1,2,3,4,5,6)
+    \item Laufende Nummer
+\end{itemize}
+
+% Folgende Wörter werden wie folgt definiert
+
+% \begin{itemize}
+%     \item SEIN: beschreibt eine Funktion %lmao
+%     \item MUSS: rechtlich bindend
+%     \item SOLL: dringend empfohlen
+%     \item WIRD: zukünftige Anforderung (eventuell Bestandteil eines späteren Releases)
+% \end{itemize}
+
+
+Die explizit mit \OPT{*} gekennzeichneten Requirements sind optionale Anforderungen, sogennante Nice-To-Haves.
+
+\subsubsection{Functional Requirements}
+
+\begin{xltabular}{\textwidth}{|l|X|r|r|}
+    \hline
+    \textbf{ID} & \textbf{Definition}   & \textbf{I}    & \textbf{QA}                                           \\
+    \hline
+
+    \setSystem{\ref*{sys:gen}}  % General
+
+    \REQ{r:1}   & Das Spiel ist pausierbar.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:2}   & Das Spiel kann zu jeder Zeit beendet werden.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:8}   & Das Spiel ermöglicht die Steuerung des \glspl{balken} per Finger.             &\checkmark      &\checkmark     \\ \hline
+    \REQ{r:8}   & Der \gls{balken} hat eine maximale Geschwindigkeit.        &\checkmark           &\checkmark         \\ \hline
+
+    \setSystem{\ref*{sys:ui}}   % User Interface
+
+    \REQ{r:3}   & \OPT{*} Der \gls{spieler} kann im \hyperref[fig:dia:mainMenu]{Hauptmenü} die Sprache wechseln.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:4}   & Der \gls{spieler} muss seinen Namen nach Ende des Spiels eingeben, sofern er einen neuen Highscore aufgestellt hat.        &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:5}   & \OPT{*} Bestimmte Aktionen im Spiel erzeugen Geräusche.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:6}   & Nach dem Drücken der Play-Taste werden die \hyperref[fig:dia:gameMode]{Spielmodus Einstellungen} angezeigt.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:7}   & In den \hyperref[fig:dia:gameMode]{Spielmodus Einstellungen} muss der Schwierigkeitsgrad gewählt werden.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:8}   & \OPT{*}In den \hyperref[fig:dia:gameMode]{Spielmodus Einstellungen} muss der Spielmodus gewählt werden.             &\checkmark      &\checkmark      \\ \hline
+    
+    \setSystem{\ref*{sys:ls}}   % Life System
+
+  
+    \REQ{r:9}   & Der \gls{spieler} hat eine Anzahl an \gls{leben}.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:10}  & Der \gls{spieler} muss ein \gls{leben} verlieren, wenn der \gls{ball} das \gls{spielfeld} verlässt. &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:11}  & Nach dem Verlust aller \gls{leben}, wird dem \gls{spieler} die Möglichkeit geboten, 1 \gls{leben} durch Ansehen eines Werbevideos wiederherzustellen.        &\checkmark      &\checkmark      \\ \hline
+
+    \setSystem{\ref*{sys:cm}}   % Classic Mode
+    
+    \REQ{r:13}  & Das Spiel hat einen Hauptmodus - \gls{classicMode}.        &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:14}  & Der \gls{ball} prallt während des Spiels vom \gls{balken} ab.              &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:15}  & Am Anfang des Spiels ist der \gls{ball} mittig auf dem \gls{balken} positioniert.              &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:16}  & Beim einmaligen Tippen auf dem Bildschirm prallt der \gls{ball} vom \gls{balken} ab und das Spiel beginnt.              &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:17}  & Der \gls{ball} prallt von den Bildschirmrändern oben, rechts, links ab.              &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:18}  & Jedes Abprallen am \gls{balken} gibt einen \gls{point}.              &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:19}  & \OPT{*} Es gibt ein Achievement-System    &\checkmark      &\checkmark   \\ \hline
+    \REQ{r:20}  & \OPT{*} Im Spiel sollen unterschiedliche Spielboni auftreten.        &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:21}  & \OPT{*} Spielboni treten zufällig auf.              &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:22}  & \OPT{*} Spielboni dauern im \gls{classicMode} eine limitierte Zeit an, bevor sie wieder verschwinden.              &      &      \\ \hline
+    \REQ{r:23}  & \OPT{*} Spielboni sind im \gls{invasionMode} persistent bis sie vom \gls{ball} getroffen und eingelöst werden.              &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:24}  & Der \gls{spieler} kann aus 3 Schwierigkeitsgraden wählen.        &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:25}  & \OPT{*} Einer der Spielboni ermöglicht es, ein \gls{leben} zurückzubekommen, falls ihre Anzahl kleiner 3 ist.            &      &      \\ \hline
+    \REQ{r:26}  & \OPT{*} Einer der Spielboni macht den \gls{ball} für limitierte Zeit langsamer.            &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:27}  & \OPT{*} Einer der Spielboni macht den \gls{balken} für limitierte Zeit größer.            &\checkmark      &\checkmark      \\ \hline
+
+    \setSystem{\ref*{sys:inv}}   % Invasion Mode
+
+    \REQ{r:28}  & \OPT{*} Das Spiel hat einen Nebenmodus: \gls{invasionMode}.    &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:29}  & \OPT{*} Im \gls{invasionMode} kann der \gls{ball} \glspl{block} zerstören.    &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:30}  & \OPT{*} Nach einer festen Zeit erscheint eine neue Reihe von \glspl{block}.     &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:31}  & \OPT{*} Erreicht mindestens ein \gls{block} den unteren Rand des \gls{spielfeld}, verliert der \gls{spieler} 1 \gls{leben}.    &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:32}  & \OPT{*} Mit zunehmender Zeit erhöht sich die Anzahl der stärkeren \glspl{block}.    &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:33}  & \OPT{*} Ein \gls{block} mit Stärke N gibt N \gls{point} beim Zerstören.    &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:34}  & \OPT{*} Einer der Spielboni macht den \gls{ball} für limitierte Zeit stärker.            &      &      \\ \hline
+    \REQ{r:35}  & \OPT{*} Einer der Spielboni ermöglicht das Zerstören der Reihe, in der er liegt.            &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:36}  & \OPT{*} Einer der Spielboni ermöglicht das Zerstören aller umliegenden \glspl{block}.            &      &      \\ \hline
+
+    \setSystem{\ref*{sys:scs}}   % Scoring System
+    
+    \REQ{r:37}  & Am Ende des Spiels erscheint eine \hyperref[fig:dia:gameOver]{Übersicht}. &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:38}  & In der \hyperref[fig:dia:gameOver]{Übersicht} werden die erreichten \glspl{point}, verdienten \glspl{coin} und Spielzeit angezeigt. &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:39}  & Falls bei Spielende ein Score höher als der 10. Score der \hyperref[fig:dia:top10]{Top10-Liste} erreicht, wird die \hyperref[fig:dia:top10]{Liste} entsprechend aktualisiert. &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:40}  & Falls die \hyperref[fig:dia:top10]{Liste} aktualisiert wurde, wird der \gls{spieler} nach dem Spiel aufgefordert, im entsprechenden \hyperref[fig:dia:fig:dia:highscore]{Menü} seinen Namen einzugeben.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:41}  & \OPT{*} Es gibt eine Top10 Highscore Tabelle pro Spielmodus.            &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:42}  & Pro Schwierigkeitsstufe gibt es einen unterschiedlichen \glspl{point}-Multiplier.             &\checkmark      &\checkmark      \\ \hline
+
+    \setSystem{\ref*{sys:cur}}   % Currency System
+    
+    \REQ{r:43}  & Für alle 10 \glspl{point} verdient der \gls{spieler} einen \gls{coin}. &\checkmark      &\checkmark      \\ \hline %Kunde will das so haben
+    \REQ{r:44}  & \glspl{coin} schalten \glspl{skin} für den \gls{ball} frei.           &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:45}  & \glspl{coin} schalten \glspl{skin} für den \gls{balken} frei.           &\checkmark      &\checkmark      \\ \hline % entweder \glspl{skin} oder PowerUp Overlay - Kunde überlegt noch, Stand: 28.10.2022
+    \REQ{r:46}  & \glspl{coin} schalten \glspl{skin} für den Hintergrund frei.           &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:47}  & \glspl{coin} schalten \glspl{skin} für den \gls{tail} des \glspl{ball} frei.           &\checkmark      &\checkmark      \\ \hline
+
+    \caption{Funktionale Anforderungen}\label{tab:functional-requirements}
+\end{xltabular}
+
+\clearpage
+
+\subsubsection{Design Requirements}
+\renewcommand{\CAT}{D}
+\begin{xltabular}{\textwidth}{|l|X|r|r|}
+    \hline
+    \textbf{ID} & \textbf{Definition}   & \textbf{I}    & \textbf{QA}                                           \\
+    \hline
+
+    \setSystem{\ref*{sys:gen}}  % General
+
+    \REQ{r:48}  & Die gesamte Applikation läuft als Singleplayer.             &\checkmark      &\checkmark     \\ \hline
+    \REQ{r:49}  & Die gesamte Applikation läuft offline.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:50}  & Der Name des Spiels ist PONG.             &\checkmark      &\checkmark     \\ \hline
+    \REQ{r:51}  & Die Ausrichtung des Spiels ist hochkant.             & \checkmark     &\checkmark     \\ \hline
+    \REQ{r:52}  & Das Haupttheme des Spiels ist dunkel mit hellen Akzenten / Space-Theme.      &\checkmark      &\checkmark     \\ \hline
+    \REQ{r:53}  & Der \gls{ball} besitzt einen \gls{tail}.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:73}  & Die Wiederherstellung eines \glspl{leben} durch Werbung (siehe \ref{r:11}) ist nur einmalig möglich. &\checkmark   &\checkmark  \\ \hline
+
+    \setSystem{\ref*{sys:ui}}  % User Interface
+
+    \REQ{r:54}  & Die im Spiel verwendete Sprache ist Englisch.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:55}  & Die \glspl{leben}-Anzeige des Spiels wird Herzen angezeigt.             &\checkmark     &\checkmark      \\ \hline
+    \REQ{r:56}  & Die Herzen der \glspl{leben}-Anzeige sind rot.             &\checkmark     &\checkmark      \\ \hline
+    \REQ{r:57}  & Buttons haben eine abgerundete Form / border-radius.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:58}  & Alle Menüs haben denselben Hintergrund wie im Spiel, nämlich der aktuell gewählte.             &\checkmark     &\checkmark      \\ \hline
+    \REQ{r:59}  & Die wählbaren Hintergrüned sind dunkel, aber nicht einfarbig.             &\checkmark     &\checkmark      \\ \hline
+    \REQ{r:60}  & Die Schriftfarbe muss einen hohen Kontrast zum Hintergrund haben. &\checkmark  &\checkmark  \\ \hline 
+    %Startbildschirm
+    \REQ{r:61}  & Am Anfang des Spiels wird ein \hyperref[fig:dia:mainMenu]{Startbildschirm} angezeigt.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:62}  & Auf dem \hyperref[fig:dia:mainMenu]{Startbildschirm} wird die Taste "Play" angezeigt.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:63}  & Auf dem \hyperref[fig:dia:mainMenu]{Startbildschirm} wird die Taste "Top 10" angezeigt.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:64}  & Auf dem \hyperref[fig:dia:mainMenu]{Startbildschirm} wird die Taste "Credits" angezeigt.             &\checkmark      & \checkmark     \\ \hline
+    \REQ{r:65}  & Auf dem \hyperref[fig:dia:mainMenu]{Startbildschirm} wird die Taste "Skins" angezeigt.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:66}  & Auf dem \hyperref[fig:dia:mainMenu]{Startbildschirm} wird die Taste mit der aktuellen Sprache angezeigt.             & \checkmark     &\checkmark      \\ \hline
+    %Spielbildschirm
+    \REQ{r:67}  & Im \hyperref[fig:dia:gameMode]{Spielbildschirm} wird zuerst der Spielmodus und darunter der Schwierigkeitsgrad angezeigt.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:68}  & Im Spiel (\hyperref[fig:dia:classic]{Classic}/\hyperref[fig:dia:invasion]{Invasion}) wird eine Headerleiste angezeigt.             &\checkmark     &\checkmark      \\ \hline
+    \REQ{r:69}  & In der Headerleiste werden links die \gls{leben} angezeigt.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:70}  & In der Headerleiste werden in der Mitte die aktuellen \glspl{point} angezeigt.             &\checkmark      &\checkmark      \\ \hline 
+    \REQ{r:71}  & Der Punktstand (\glspl{point}) wird ohne führende Nullen angezeigt.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:72}  & In der Headerleiste wird rechts die Pause-Taste angezeigt.             &\checkmark      &\checkmark      \\ \hline
+    %Endbildschirm Summary
+    
+    \setSystem{\ref*{sys:cm}}   % Classic Mode
+
+    \REQ{r:81}  & Der Abprall des \glspl{ball} an den Wänden hängt vom Eintrittswinkel ab.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:82}  & Der Abprall des \glspl{ball} am \gls{balken} hängt vom Eintrittswinkel und Auftreffpunkt ab.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:83}  & \OPT{*} Die Spielboni sind visuell dargestellt.        &\checkmark      &\checkmark      \\ \hline
+    %Schwierigkeitsgrad
+    \REQ{r:84}  & Auf Schwierigkeitsgrad "Easy" bleibt der \gls{ball} auf normale Geschwindigkeit.              &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:85}  & Auf Schwierigkeitsgrad "Easy" ist der \gls{balken} größer.              &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:86}  & Auf Schwierigkeitsgrad "Medium" ist der \gls{balken} mittelgroß.            &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:87}  & Auf Schwierigkeitsgrad "Medium" wird der \gls{ball} bis zu einem von den Entwicklern bestimmten Hochpunkt schneller.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:88}  & Auf Schwierigkeitsgrad "Hard" steigt die Geschwindigkeit des \glspl{ball} mit einer schnelleren Rate.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:89}  & Auf Schwierigkeitsgrad "Hard" ist die maximale Geschwindigkeit des \glspl{ball} größer als auf "Medium".             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:90}  & Auf Schwierigkeitsgrad "Hard" ist der \gls{balken} klein.             &\checkmark      &\checkmark      \\ \hline
+
+    \setSystem{\ref*{sys:inv}}   % Invasion Mode
+
+    \REQ{r:96}  & \OPT{*} Im \gls{invasionMode} ist die \gls{ball}-Größe ca. 80\% der \gls{block}-Größe.            &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:97}  & \OPT{*} Jeder \gls{block} besitzt eine individuelle Stärke/HP.    &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:98}  & \OPT{*} Die Stärke (vgl. \ref{r:97}) der liegt zwischen 1 und 6, inklusive.    &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:99}  & \OPT{*} Die Farbe jedes \glspl{block} ist je nach Stärke (vgl. \ref{r:97}) unterschiedlich.    &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:100} & \OPT{*} Pro Reihe gibt es 6 \glspl{block}.    &\checkmark      &\checkmark      \\ \hline
+
+    \setSystem{\ref*{sys:scs}}   % Scoring System
+
+    \REQ{r:75}  & Solange der \gls{point}-Score wegen \glspl{powerup} verdoppelt wird, steht unter dem aktuellen Punktstand "2x".              &      &      \\ \hline
+    \REQ{r:77}  & Jedes Element aus der \hyperref[fig:dia:top10]{Top10-Liste} besteht aus Position, Namen, Punktstand und Spielzeit.         &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:78}  & In der \hyperref[fig:dia:top10]{Top10-Liste} wird die Schwierigkeitsstufe durch eine entsprechende Farbe der Zeile gezeigt. &\checkmark      &\checkmark     \\ \hline
+    \REQ{r:105} &  \gls{coin}-Stand wird im \hyperref[fig:dia:mainMenu]{Hauptmenü} \& \hyperref[fig:dia:skins]{Store} angezeigt.            & \checkmark     &\checkmark      \\ \hline
+    \REQ{r:101} &  Der gleiche Name kann mehrmals in der \hyperref[fig:dia:top10]{Top10-Liste} auftauchen.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:102} &  Der erreichte \gls{point}-Score wird am Ende jedes Spiels in der \hyperref[fig:dia:gameOver]{Übersicht} angezeigt.            &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:103} &  Die erreichte \gls{coin} Anzahl wird am Ende jedes Spiels in der \hyperref[fig:dia:gameOver]{Übersicht} angezeigt.            &\checkmark      &\checkmark      \\ \hline
+
+    \setSystem{\ref*{sys:cur}}   % Currency System
+
+    \REQ{r:104} &  Die Währung für den Store heißt "\glspl{coin}".         &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:79}  & Es gibt einen Default-\gls{skin}.           &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:80}  & \glspl{skin} sind in verschiedenen Kategorien je nach Elementtyp(\gls{ball}, \gls{balken}, \gls{tail}, Hintergrund) unterteilt.           &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:74}  & Pro Kategorie gibt es mindestens 5 freischaltbare \glspl{skin}.           &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:106} & Die \glspl{skin} werden pro Kategorie sukzessiv teurer.           &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:91}  &  Der 1. \gls{skin} wird nach etwa 2 Spielen freigeschaltet.            &\checkmark      &\checkmark      \\ \hline %bleibt wegen Balancing, so der Kunde
+    \REQ{r:92}  &  Der 2. \gls{skin} wird nach etwa 5 Spielen freigeschaltet.            &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:93}  &  Der 3. \gls{skin} wird nach etwa 10 Spielen freigeschaltet.            &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:94}  &  Der 4. \gls{skin} wird nach etwa 20 Spielen freigeschaltet.            &\checkmark      &\checkmark     \\ \hline
+    \REQ{r:95}  &  Der 5. \gls{skin} wird nach etwa 30 Spielen freigeschaltet.            &\checkmark      &\checkmark      \\ \hline
+    
+    \caption{Design Anforderungen}\label{tab:design-requirements}
+\end{xltabular}
+
+\clearpage
+
+\subsubsection{Performance Requirements}
+\renewcommand{\CAT}{P}
+\begin{xltabular}{\textwidth}{|l|X|r|r|}
+    \hline
+    \textbf{ID} & \textbf{Definition}   & \textbf{I}    & \textbf{QA}                                           \\
+    \hline
+
+    \setSystem{\ref*{sys:gen}}   % Life System
+
+    \REQ{r:112} & \gls{ladezeiten} müssen unter 5 Sekunden liegen.        &\checkmark     &\checkmark      \\ \hline
+
+    \setSystem{\ref*{sys:ls}}   % Life System
+
+    \REQ{r:107} & Das Spiel startet mit 3 \gls{leben}.             &\checkmark     &\checkmark      \\ \hline
+
+    \setSystem{\ref*{sys:cm}}   % Classic Mode
+
+    \REQ{r:108} & Eine Spielrunde im Schwierigkeitsgrad "Medium" soll im Schnitt etwa 5 Minuten dauern.             &\checkmark      &\checkmark      \\ \hline
+    \REQ{r:109} & Die verlangsamte Geschwindigkeit des \glspl{ball} beträgt etwa 70\% der normalen. &\checkmark   &\checkmark    \\ \hline
+
+    \caption{Performance Anforderungen}\label{tab:performance-requirements}
+\end{xltabular}
+
+\subsubsection{Operational Requirements}
+\renewcommand{\CAT}{O}
+\begin{xltabular}{\textwidth}{|l|X|r|r|}
+    \hline
+    \textbf{ID} & \textbf{Definition}   & \textbf{I}    & \textbf{QA}                                           \\
+    \hline
+
+    \setSystem{\ref*{sys:gen}}  % General
+
+    \REQ{r:110} & Das Spiel ist nur unter Android lauffähig.               &\checkmark      &\checkmark      \\ \hline
+    
+    \setSystem{\ref*{sys:ui}}   % User Interface
+
+    \REQ{r:111} & Das Spiel muss entsprechend der Bildschirmmaße skaliert werden.             &\checkmark      &\checkmark      \\ \hline
+    
+    \caption{Operationale Anforderungen}\label{tab:operational-requirements}
+\end{xltabular}
