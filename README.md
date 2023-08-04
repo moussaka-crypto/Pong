@@ -1,9 +1,6 @@
 # Pong
 
-Im Rahmen der Veranstaltung Software Engineering soll ein Spiel namens "Pong" entwickelt werden.
+An Android game developed, as a part of the Software Engineering course at my university.
 
-
-## Git Struktur
-
-- `Documents` enthält sämtliche versionskontrollierte Dokumente
-- `Unity/Pong` enthält alle implementierungsbezogenen Projektdateien
+- `Documents` contains all relevant documents
+- `Unity/Pong` contains all project files related to the implementation
